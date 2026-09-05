@@ -1,7 +1,7 @@
 ---
 title: Journal
 project:
-  name: Ivory Kleio
+  name: Ivory KLEIO
   repository: https://github.com/DigitalHumanitiesCraft/ivory-kleio
 method:
   name: Promptotyping
@@ -23,6 +23,12 @@ Entries record substantive transitions and the evidence behind them. Future work
 
 ## Entries
 
+### 2026-09-05 integrated documentation refactor
+
+The project owner requested consolidation after the naming, harness, website and prototype discussion. The knowledge base now uses Ivory KLEIO consistently and separates scientific purpose, requirements, architecture, website content and design. The README and one-pager present the same maintained project scope. Private workspace project notes route to the public repository rather than maintaining a competing specification.
+
+The temporal experiment now has a proposed input and operation contract, expected results and JSON round-trip criteria. The website brief defines staged learning paths, and the design brief records an unvalidated visual direction. Astro with Starlight and WebAssembly remain proposed technical choices. Reading states were preserved, and this transition adds no primary analysis or software implementation.
+
 ### 2026-09-05 integrated public repository
 
 The project owner created the public DigitalHumanitiesCraft/ivory-kleio repository. Its empty remote was connected to the local research repository, and the existing history was published on main. The remote branch was checked against the local commit before the repository mapping and work position were updated.
@@ -33,6 +39,6 @@ The project owner's request established an English README using the KLEIO expans
 
 ### 2026-09-05 integrated research foundation
 
-The project owner's proposal and follow-up discussion were distilled into the project, specification, architecture and research methodology. The working name is Ivory Kleio. The owner authorized a public repository under DigitalHumanitiesCraft. Rust remains selected for the core, and an agentic research environment is represented as an architectural hypothesis. The initial source inventory records partial reading honestly. Synthetic temporal and agent-provenance cases make the first acceptance questions explicit.
+The project owner's proposal and follow-up discussion were distilled into the project, specification, architecture and research methodology. The working name is Ivory KLEIO. The owner authorized a public repository under DigitalHumanitiesCraft. Rust remains selected for the core, and an agentic research environment is represented as an architectural hypothesis. The initial source inventory records partial reading honestly. Synthetic temporal and agent-provenance cases make the first acceptance questions explicit.
 
 The knowledge base follows the Promptotyping templates referenced in its headers. Original documentation uses CC BY 4.0 and project code uses MIT according to the owner's standing licensing instruction.

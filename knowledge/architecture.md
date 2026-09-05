@@ -1,7 +1,7 @@
 ---
 title: Architecture
 project:
-  name: Ivory Kleio
+  name: Ivory KLEIO
   repository: https://github.com/DigitalHumanitiesCraft/ivory-kleio
 method:
   name: Promptotyping
@@ -19,48 +19,72 @@ related: [specification, research-methodology, testing]
 
 # Architecture
 
-The intended architecture separates historical semantics from model-mediated research work. Component boundaries are hypotheses to test against the [specification](specification.md). The repository currently provides the research documentation on which implementation will be based.
+This document describes proposed component boundaries and their technical implications. Rust is the selected core language. The historical object model, storage technology and harness runtime remain open. The repository currently contains documentation and research artifacts.
 
 ## Stack
 
-Rust is selected for the reference model and kernel. The harness, user interface and physical storage technology remain undecided. The first integration should expose a small, typed tool interface and reuse an appropriate existing harness runtime where possible.
+The reference model starts as a small Rust library with a callable example or a small CLI. Its first operation is specified in [Specification](specification.md#minimum-prototype). Separate crates follow when an interface or evaluation task justifies them.
+
+Astro with Starlight is the proposed documentation stack. A later WebAssembly build would expose the same Rust operation in the browser. Framework selection and toolchain versions will be recorded with implementation.
 
 ## Components
 
-| Component | Proposed responsibility |
-|---|---|
-| Reference model and kernel | Historical values, explicit contexts, supported operations and derivations |
-| Persistence and query execution | Durable collections, revision retrieval and query evaluation |
-| Agent harness | Context selection, tool execution, workflow state and recorded feedback |
-| LLM | Candidate interpretations, proposed query plans and explanations |
-| Research interface | Source inspection, comparison of alternatives and revision of decisions |
+| Component | Proposed responsibility | Boundary |
+|---|---|---|
+| Reference model and kernel | Historical values, explicit contexts, operations and derivations | Callable independently of an LLM |
+| Persistence and query execution | Durable collections, revision retrieval and query evaluation | Preserve the reference semantics |
+| Agent harness | Context selection, tool execution, workflow state and recorded feedback | Invoke declared operations with inspectable inputs |
+| LLM | Candidate interpretations, query plans and explanations | Produce attributable proposals |
+| Research interface | Source inspection, alternatives and scholarly decisions | Expose evidence and dependencies |
+| Documentation website | Project explanation, tutorials and reference material | Teach behavior supported by the current implementation |
 
-These responsibilities do not prescribe separate packages. The kernel is intended to remain usable without an LLM.
+These responsibilities do not imply separate packages or products. The harness is a proposed primary research interface. It can use an existing runtime where its tool and provenance boundaries fit the specification.
 
 ## Data flow
 
-A research request becomes an inspectable proposed operation. The harness gathers evidence and supplies a candidate interpretation and explicit context. The core validates the operation's formal preconditions and evaluates it. Results retain their dependencies. A scholarly decision records how an interpretation is used.
+A research request becomes an inspectable proposed operation. The harness gathers evidence and supplies an interpretation with explicit context. The kernel validates formal preconditions and evaluates the operation. A result retains its input references and applicable rules. The researcher can inspect the result and record a decision about its use.
 
-The tool boundary must distinguish invalid input, an undefined operation, absent evidence and a result under stated assumptions. The initial object model remains open, including the relationship between token, interpretation, assertion and entity.
+The tool contract must distinguish invalid input, an unsupported or undefined operation, absent evidence and a computed result under stated assumptions. A model proposal, formal validation and scholarly adoption are separate records.
 
-## External models and services
+The underlying relationships between token, interpretation, assertion and entity remain research questions. A versioned assertion graph is a candidate structure. A graph alone does not define uncertainty semantics or the meaning of execution.
 
-Model calls should have an attributable invocation, input references, configuration and retained output. Provider model identifiers describe the actual invocation. A subsequent call can produce a different proposal. Core reproducibility is tested using stored inputs and rule versions.
+## Reference model and persistence
 
-The [agent case](../research-artefacts/cases/agent-interpretation.md) defines the first proposed interaction without selecting a provider or framework.
+The first experiment needs tagged temporal values, source references, one operation and a versioned JSON snapshot. Saving and loading that snapshot tests semantic preservation. It does not establish transactions, crash recovery, indexing or general query execution.
 
-## Security
+An embedded engine can initially use an existing storage component under the semantic core. Its choice follows the requirements and workloads. Optimised query evaluation must agree with a simple reference evaluation.
 
-Source documents are input data and may contain text resembling instructions. The harness must preserve this boundary. Tools enforce their declared operations and access scope. New remote services require an explicit decision about which research material they receive.
+Rust types can make distinctions explicit, but the project must still define their operations. Uncertain conditions may require a dedicated evaluator. Ordinary host-language Boolean branching must not silently determine historical uncertainty semantics. Distributed conflict resolution addresses synchronisation and does not decide the scholarly meaning of contradictory sources.
 
-## Accessibility
+## Agent integration
 
-The proposed interface must allow direct inspection of sources, alternatives and changes through keyboard navigation and understandable text. Review state must be expressed in content as well as any visual encoding.
+The [agent case](../research-artefacts/cases/agent-interpretation.md) defines a later evaluation target. Each model call should retain its invocation identity, input references, available configuration and actual output. A repeated invocation may produce a different proposal.
+
+The harness uses the tested core through a typed tool interface. Selecting that transport and a harness runtime follows an executable kernel operation. Natural-language explanations accompany the structured result and must preserve its assumptions.
+
+Source documents are research input. Text within them does not gain authority to change tool permissions or workflow instructions. Remote model services require a defined scope for the research material they receive. Credentials remain outside tracked content and public browser bundles.
+
+## Website and browser demonstration
+
+[Starlight](https://starlight.astro.build/) supplies a proposed basis for navigation, search and documentation components. [Astro's GitHub deployment guide](https://docs.astro.build/en/guides/deploy/github/) describes deployment to Pages. The implementation must account for the repository subpath and verify asset and documentation links in that deployment context.
+
+[GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages) hosts static HTML, CSS and JavaScript. A browser demonstration can execute the bounded Rust operation through WebAssembly. The [Rust to WebAssembly guide](https://developer.mozilla.org/en-US/docs/WebAssembly/Guides/Rust_to_Wasm) provides an implementation starting point. Browser-side code must reuse the kernel semantics.
+
+A backend harness would run locally or in a separately hosted service. The documentation site does not supply that backend. The [website specification](website-specification.md) owns its learning paths and publication criteria, while [Design](design.md) owns the proposed presentation.
 
 ## Repository structure
 
-The [index](INDEX.md) owns navigation through the actual knowledge base and artifact locations. Rust packages will be introduced with their first executable experiment. Component extraction follows an independently meaningful interface or evaluation task.
+The [index](INDEX.md) inventories the actual files. The following additions describe a possible evolution and do not exist yet.
+
+| Stage | Candidate addition | Reason |
+|---|---|---|
+| Reference model | Root Cargo package with `src/`, `examples/` and focused tests | Keep one operation easy to inspect and run |
+| Documentation website | `site/` and a Pages workflow under `.github/workflows/` | Publish maintained explanations and examples |
+| Browser demonstration | A WebAssembly adapter around the same library | Teach the operation without duplicated semantics |
+| Embedded engine and harness | Additional modules or packages as needed | Separate responsibilities after their contracts are demonstrated |
 
 ## Build and deployment
 
-The current foundation is Markdown and CSV. The next implementation step will select and record a Rust toolchain, add a minimal build and provide the meaningful checks required by [Testing](testing.md). No database service is deployed by this foundation.
+There is currently no Rust build, website build or deployed database service. The first implementation will record the actual toolchain and reproducible commands in [Testing](testing.md).
+
+The proposed site deployment uses a [GitHub Actions Pages workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages). Publication requires a successful build, link and deployment-path checks, and review of the rendered pages.

@@ -1,7 +1,7 @@
 ---
 title: Index
 project:
-  name: Ivory Kleio
+  name: Ivory KLEIO
   repository: https://github.com/DigitalHumanitiesCraft/ivory-kleio
 method:
   name: Promptotyping
@@ -15,12 +15,12 @@ language: en
 created: 2026-09-05
 updated: 2026-09-05
 version: "0.1"
-related: [project, specification, architecture, research-methodology, testing, plan, journal, handoff]
+related: [project, specification, architecture, website-specification, design, research-methodology, testing, plan, journal, handoff]
 ---
 
 # Index
 
-Ivory Kleio connects historical information modelling with an agentic research environment. Researchers and coding agents use the documents below to select the relevant evidence, requirements and work context.
+Ivory KLEIO connects historical information modelling with an agentic research environment. Researchers and coding agents use the documents below to select the relevant evidence, requirements and work context.
 
 ## Documents
 
@@ -29,6 +29,8 @@ Ivory Kleio connects historical information modelling with an agentic research e
 | [Project](project.md) | What are the scientific purpose and product boundaries? | Scope or contribution changes |
 | [Specification](specification.md) | What behavior is required and on what grounds? | A sourced requirement or acceptance case changes |
 | [Architecture](architecture.md) | How do the proposed components interact? | A technical decision gains evidence |
+| [Website specification](website-specification.md) | What should visitors learn and which pages can be published? | A learning path or publication criterion changes |
+| [Design](design.md) | How should the website present research and interactions? | A visual or interaction choice gains evidence |
 | [Research methodology](research-methodology.md) | How are sources read and concepts formalized? | A research procedure or source criterion changes |
 | [Testing](testing.md) | What does each check establish? | Implemented behavior or evaluation design changes |
 | [Plan](plan.md) | What is the current work position and accepted next work? | Work or a dependency changes |
@@ -43,7 +45,7 @@ The root [AGENTS.md](../AGENTS.md) provides the shared action layer. [CLAUDE.md]
 
 ## Reading paths
 
-Start a session with this index, then the handoff inbox. For orientation, continue with project and specification. For source work, use research methodology and the corpus inventory. For implementation, read specification, architecture and testing. Consult the journal when the reason for an earlier transition matters.
+Start a session with this index, then the handoff inbox. For orientation, continue with project and specification. For source work, use research methodology and the corpus inventory. For kernel implementation, read specification, architecture and testing. For website work, also read website specification and design. Consult the journal when the reason for an earlier transition matters.
 
 ## Convention
 
@@ -51,7 +53,7 @@ The knowledge base follows the [Promptotyping document templates](https://dhcraf
 
 The common document schema version is owned by this index. Sibling documents inherit it. Their content dates and template versions remain independent. A future formal data or operation contract will have its own explicitly declared version.
 
-The repository owns technical requirements and their evidence. The separate scientific proposal is maintained by the project owner. Public contributors can understand and extend the repository without access to a private workspace.
+This repository owns the current project purpose, requirements, architecture and their evidence. The [scientific proposal](../research-artefacts/ivory-kleio-proposal.md) and README present that maintained knowledge for different reading tasks. The public site will render canonical specifications and provide separately authored tutorials. Private workspace notes route to this repository and retain broader theoretical connections. Public contributors need no private workspace access.
 
 ## Terms
 
@@ -59,8 +61,11 @@ The repository owns technical requirements and their evidence. The separate scie
 - CLI: command-line interface.
 - Historical context: explicit interpretive conditions such as calendar, place, unit system or rule version.
 - Interpretation: an attributed reading or reconstruction tied to evidence and assumptions.
+- Ivory KLEIO: the project and intended research environment. KLEIO expands to Knowledge-Led Exploration, Interpretation and Operationalisation of Historical Information. The repository name is `ivory-kleio`.
 - Ivory: the historical-information research programme studied by this project.
-- Kleio: the source-oriented historical computing system referenced by the project name.
+- Kleio: the source-oriented historical computing system referenced by the project name. Compatibility with its formats would require a separately specified feature.
+- Kernel: the reusable implementation of declared historical semantics and, as the engine develops, persistence and query behavior.
+- Prototype: the first bounded semantic experiment. Its success does not establish a general database system.
 - LLM: large language model.
 - Reference model: an executable, inspectable implementation of specified behavior used to assess alternatives.
 - Source uncertainty: underdetermination or vagueness in historical evidence and its interpretation. It is distinct from uncertainty in a machine extraction.

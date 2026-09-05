@@ -1,7 +1,7 @@
 ---
 title: Testing
 project:
-  name: Ivory Kleio
+  name: Ivory KLEIO
   repository: https://github.com/DigitalHumanitiesCraft/ivory-kleio
 method:
   name: Promptotyping
@@ -19,50 +19,44 @@ related: [specification, architecture, plan]
 
 # Testing
 
-A check establishes a specified property. Documentation integrity, formal operation behavior and scholarly validity require different evidence. The [specification](specification.md) identifies the behavior to assess.
+Documentation integrity, formal operation behavior and scholarly validity require different evidence. [Specification](specification.md) owns expected behavior. This document owns how to assess it.
 
-## Test strategy
+## Documentation checks
 
-Validate document metadata, internal links, the index inventory and CSV structure for the documentation foundation. Review reading-status claims against the recorded source evidence.
+For the current repository, check required knowledge metadata, nested project and method fields, process statuses, the index inventory and repository-relative Markdown links. Parse the corpus CSV and check its reading-state vocabulary and note paths. Review source claims against the recorded evidence.
 
-For the executable reference model, implement the smallest meaningful examples and counterexamples for each operation. Add property-based checks only for properties justified by the model.
+Run `git diff --check` for whitespace errors. Check that public files contain no machine-specific paths or unresolved private-vault links. The index alone owns the common knowledge schema version.
 
-## Guarantees
+## Reference model acceptance
 
-A successful metadata or link check establishes document consistency. A successful core test establishes the specified behavior on its defined cases or properties. Scholarly validity requires a separate assessment of the source interpretation and the operation's relevance.
+The [minimum prototype](specification.md#minimum-prototype) defines a proposed bounded contract. The [temporal case](../research-artefacts/cases/temporal-alternatives.md) supplies an independently stated result table.
 
-## Acceptance
+When implemented, meaningful checks must establish that the exhaustive alternatives and inclusive interval give different answers for 1705, agree at the endpoints, and reject years outside their represented possibilities. Check that structured explanations identify the input, interpretation and rule used.
 
-The [temporal case](../research-artefacts/cases/temporal-alternatives.md) fixes a query and expected results before code. The [agent case](../research-artefacts/cases/agent-interpretation.md) fixes provenance and decision boundaries.
+Test save and reload for preserved identifiers, original wording, temporal variant and operation result. Invalid intervals, empty alternatives, unsupported variants and unknown snapshot versions must produce the declared errors. Parsing failure must not become a historical false result.
 
-An engine experiment must preserve specified query behavior across closing and reopening a collection. Test revisions and interrupted writes when persistence is introduced. Compare indexed queries with a simple reference evaluation.
+Add property-based checks only for justified properties. Do not weaken a case's expected result to fit an implementation.
 
-## Evaluation boundary
+## Engine and harness evaluation
 
-A stored proposal and invocation record support audit of what occurred. They do not guarantee that a new model invocation recreates that proposal. Core reproducibility uses explicit stored values, context and rule versions.
+An engine must reproduce specified queries after closing and reopening a collection. Add revision, interrupted-write and recovery checks with the corresponding persistence mechanisms. Compare indexed evaluation against the reference operation.
 
-## How to run
+The [agent case](../research-artefacts/cases/agent-interpretation.md) belongs to later harness evaluation. Inspect the recorded model proposal, invocation context, formal validation and scholarly decision. Test whether a revised assumption leads to identifiable affected computations.
 
-For the documentation foundation, run `git diff --check`, parse the knowledge frontmatter and corpus CSV, and resolve repository-relative Markdown links. Confirm that the index covers every actual knowledge document.
+A retained invocation supports audit of what occurred. It does not guarantee identical output from a new model call. Core reproducibility uses stored values, explicit context and rule versions.
 
-Commands for compiling or testing Rust enter this section with the first implemented experiment and selected toolchain.
+## Website acceptance
 
-## Checks with the corresponding change
+The [website specification](website-specification.md#acceptance) defines publication criteria. Once implemented, run the production build and check repository-subpath links and assets. Review the rendered landing page, reading page and temporal example on narrow and wide screens, including keyboard navigation.
 
-Change the acceptance behavior only with a documented semantic reason. Include the associated meaningful check with an implemented operation. A passing test must not be produced by weakening an independently established expected result.
+Verify browser results against the same reference fixtures used by Rust. Tutorials must reproduce actual commands and expected output at their documented revision. A static explanatory table must not be presented as a running demonstration.
 
-## Case-first workflow
+## Evidence and limits
 
-Define the research question, data interpretation, assumptions and expected observable result. Implement the bounded operation and examine counterexamples. Preserve cases that distinguish competing models.
+The current repository has synthetic cases and documentation. No implemented Rust operation, database engine, harness or website has yet been evaluated.
 
-## Known limits
+A passing document check establishes consistency. A passing operation test establishes the specified behavior within its scope. Historical validity requires source interpretation and domain review. Claims of improved performance or usability require comparative evidence.
 
-The current cases are synthetic. They establish research questions rather than empirical performance or general historical adequacy. Neither the kernel nor the harness has an implementation in this initial foundation.
+## Executable commands
 
-## Components
-
-Core evaluation compares semantic preservation, auditability, modelling effort and execution performance. Harness evaluation holds the core fixed and examines whether researchers can understand proposals, identify errors and revise decisions.
-
-## Current evidence
-
-The work position is maintained in [Plan](plan.md), and completed substantive transitions are recorded in [Journal](journal.md). Claims of implemented behavior require reproducible evidence from actual code.
+The only current generic repository command is `git diff --check`. Compilation, test and website commands will be documented here when their build configuration and implementation exist. [Plan](plan.md) records the work position, and [Journal](journal.md) records substantive transitions.

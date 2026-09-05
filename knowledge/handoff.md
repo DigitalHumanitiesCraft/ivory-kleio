@@ -1,7 +1,7 @@
 ---
 title: Handoff
 project:
-  name: Ivory Kleio
+  name: Ivory KLEIO
   repository: https://github.com/DigitalHumanitiesCraft/ivory-kleio
 method:
   name: Promptotyping

@@ -1,7 +1,7 @@
 ---
 title: Project
 project:
-  name: Ivory Kleio
+  name: Ivory KLEIO
   repository: https://github.com/DigitalHumanitiesCraft/ivory-kleio
 method:
   name: Promptotyping
@@ -25,48 +25,53 @@ knowledge-sources:
 
 # Project
 
-Ivory Kleio investigates a database technology for historical information and an agentic environment for its scholarly use. The central question is how evidence, context and uncertainty can remain explicit through representation, computation and revision.
+Ivory KLEIO investigates how source evidence, historical context and uncertainty can remain explicit through representation, computation and revision. Its intended product is an agentic research environment with a database kernel for historical information.
 
 ## Material basis
 
-Historical financial sources provide the first intended application context through [the dissertation](https://unipub.uni-graz.at/obvugrhs/12127700) and the Bookkeeping Ontology. A specific reusable source collection remains to be selected. The initial [cases](../research-artefacts/cases/) are explicitly synthetic. Primary literature is registered in the [corpus inventory](../research-artefacts/corpus.csv).
+The [dissertation on historical financial information](https://unipub.uni-graz.at/obvugrhs/12127700) and the Bookkeeping Ontology supply the first intended application context. A specific reusable historical collection remains to be selected. The current [cases](../research-artefacts/cases/) are synthetic.
 
-## Broader context
-
-The project connects the Ivory programme with source-oriented processing in Kleio. Relevant starting points include *The Need for a Theory of Historical Computing* (1991) and *On vagueness and uncertainty in historical data* (2020). The intellectual connection is a research basis, rather than evidence that a particular graph or storage structure has already been established.
+The Ivory programme and source-oriented processing in Kleio provide the principal research starting points. The [corpus inventory](../research-artefacts/corpus.csv) records the consulted representations and their incomplete reading states. Systematic reconstruction of the relevant primary corpus precedes adoption of a domain baseline.
 
 ## Research purpose
 
-The project has two connected research contributions.
+The working hypothesis is that a shared semantic core can preserve the meaning of historical values across processing chains. Its contribution must be assessed against carefully implemented alternatives using equivalent information and rules.
 
-First, reconstruct the requirements of historical information, specify appropriate data types and operations, and evaluate an executable database kernel.
+The research has six objectives.
 
-Second, investigate whether an agentic environment helps researchers formulate, inspect and revise work over that kernel while preserving source attribution and competing interpretations.
+1. Reconstruct the requirements of historical information from primary texts, with passage-level evidence, scope and counterexamples.
+2. Specify data types and relationships that distinguish source representations, interpretations and reconstructed entities.
+3. Define comparison, arithmetic, aggregation and conditional execution with explicit context and uncertainty semantics.
+4. Develop a persistent kernel that supports queries, revisions and recovery of earlier research states.
+5. Investigate an agentic environment in which researchers inspect proposals, compare assumptions and revise scholarly decisions.
+6. Evaluate semantic preservation, auditability, modelling effort, execution performance and scholarly usability.
 
-The initial hypothesis is that a shared semantic core can preserve the meaning of historical values across processing chains. Its contribution must be assessed against carefully implemented alternatives.
+These objectives concern both representation and execution. A value that stores alternatives is insufficient if a later operation silently converts them to a continuous interval.
 
-## Standards
+## Research questions
 
-[PROV-O](https://www.w3.org/TR/prov-o/) and the [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) are candidate interoperability references for derivations and source locations. Their relevance does not determine the kernel's internal representation. A mapping will require an explicit semantic contract.
+The specification investigates which requirements generalise across source forms, which distinctions need primitive types, and which belong to contextual rules. It also asks how competing readings, jointly applicable properties and contradictory evidence differ, how their dependencies affect operations, and how revisions identify affected results.
 
-## Technical implementation
+The database contribution concerns the semantics exposed by a reusable kernel and the persistence and query mechanisms needed to preserve them. New physical storage or indexing technology becomes a research contribution when the specified workloads justify it.
 
-Rust is the selected language for the semantic core. The [architecture](architecture.md) describes the proposed boundary between the core, persistence, agent harness and scholarly interface. Physical storage and the harness implementation remain open choices.
+The harness contribution concerns whether model-mediated work helps researchers understand and revise interpretations over that same kernel. Formal validation establishes conformity to a declared operation. Scholarly adoption remains an attributable research decision.
 
-## Functional scope
+## Product boundary
 
-The intended system will represent historical values with their contexts, perform explicit operations, preserve revisions and expose inspectable results. Agent tools should help retrieve evidence, propose interpretations and compare outcomes under different assumptions.
+A database is a stored collection. A database management system provides the procedures for storing, changing and querying collections. A research tool supports activities such as source inspection or hypothesis comparison. Ivory KLEIO is the project and intended environment encompassing the kernel and its scholarly tools.
 
-The [specification](specification.md) owns candidate requirements and acceptance behavior.
+The first executable target is a small Rust reference model. A persistent embedded kernel and agent-mediated research workflow follow from demonstrated behavior. The [public website](website-specification.md) explains and teaches the project. Its browser demonstration is a learning interface to a bounded operation.
 
-## Boundaries
+A general query language, distributed synchronisation, server deployment and dedicated physical storage each need a separate use case. A full scholarly editing platform is outside the initial scope.
 
-The first executable research target is a reference model. A persistent embedded engine follows from demonstrated behavior. A scholarly interface develops from observed research tasks. Distributed operation, a new general programming language and dedicated physical storage each require separate justification.
+## Standards and implementation
 
-## Terms
+Rust is selected for the core. [Architecture](architecture.md) owns the proposed component boundaries and technical options.
 
-Ivory KLEIO is the working project name and `ivory-kleio` is the repository name. KLEIO expands to Knowledge-Led Exploration, Interpretation and Operationalisation, qualified by the domain of historical information. Ivory retains its connection to the published research programme. Compatibility with historical Kleio formats would be a separately specified feature.
+[PROV-O](https://www.w3.org/TR/prov-o/) and the [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) are candidate interoperability references for derivations and source locations. A mapping must state what it preserves or approximates. Neither reference determines the internal representation.
 
-## License
+## Name and publication
 
-Original project text uses [CC BY 4.0](../LICENSE), and project code uses [MIT](../LICENSE-CODE). Source-specific reuse conditions remain attached to the materials.
+The [index glossary](INDEX.md#terms) owns the name and KLEIO expansion. The public repository is [DigitalHumanitiesCraft/ivory-kleio](https://github.com/DigitalHumanitiesCraft/ivory-kleio). Repository documentation and the planned website use English.
+
+Original text uses [CC BY 4.0](../LICENSE), and code uses [MIT](../LICENSE-CODE). Third-party materials retain their own terms. The [scientific proposal](../research-artefacts/ivory-kleio-proposal.md) is a concise presentation of the maintained research purpose and specification.

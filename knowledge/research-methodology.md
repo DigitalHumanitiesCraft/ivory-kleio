@@ -1,7 +1,7 @@
 ---
 title: Research methodology
 project:
-  name: Ivory Kleio
+  name: Ivory KLEIO
   repository: https://github.com/DigitalHumanitiesCraft/ivory-kleio
 method:
   name: Promptotyping
@@ -23,42 +23,52 @@ related: [project, specification, testing]
 
 # Research methodology
 
-Primary-text analysis establishes the domain requirements. The project distinguishes a historical problem, an author's proposed solution and its own formal interpretation. Selected passages already inform the [specification](specification.md), while complete reconstruction remains research work.
+Primary-text analysis establishes the domain requirements. The project distinguishes a historical problem, an author's proposed solution and its own formal interpretation. Selected passages inform the [specification](specification.md), while complete reconstruction remains research work.
 
 ## Rationale
 
-Bibliographically inventory the Ivory blog and related works, then read all contributions relevant to historical information representation, processing and implementation in full. Use backward references to trace earlier source-oriented processing and Kleio. The initial inventory is a starting set, not the complete corpus.
+Bibliographically inventory the Ivory blog and related works, then read all contributions relevant to historical information representation, processing and implementation in full. Record inclusion and exclusion reasons as the corpus expands. Follow references to earlier source-oriented processing, Kleio manuals and surviving implementations.
+
+Compare the development of concepts across publications. Existing summaries help locate evidence. Attributed requirements require inspection of the primary text. A broad domain baseline depends on complete analysis of the relevant corpus. Small executable experiments can accompany reading as explicitly bounded hypotheses.
 
 ## Phenomena and their treatment
 
-Record intervals, exclusive alternatives, missingness, linguistic vagueness, contextual interpretation and dependencies as distinct candidate phenomena. For each, identify what the source explicitly claims and what the project infers.
+Distinguish intervals, exclusive alternatives, missingness, linguistic vagueness, contextual interpretation and dependencies. Probability, possibility and linguistic uncertainty each require a stated meaning. Their combination needs justification.
 
-A reading record contains a source ID, consulted representation, passage locator, paraphrase, open interpretation and links to candidate requirements. Preserve counterexamples and unresolved terminology.
+Investigate event time, validity time, source recording time, research decision time and system time as potentially different dimensions. Establish which dimensions a case needs and how they relate. These distinctions are inherited project questions, not a fully reconstructed taxonomy attributed to the primary corpus.
 
-## Mapping tables
+For each operation, define what its inputs mean, which context it needs, its result vocabulary and how it composes with later operations. Preserve counterexamples involving dependent hypotheses or mutual exclusion. Independence, distributivity and ordinary equality semantics must be justified for the chosen model.
 
-| Evidence class | Interpretation in project work |
+## Evidence and requirement mapping
+
+| Evidence class | Treatment |
 |---|---|
-| Explicit source requirement | Attribute the wording or faithful paraphrase to a precise passage |
-| Author-proposed implementation | Record as a solution proposal that can be assessed |
-| Project inference | Mark the inferential step and the case that motivates it |
-| Synthetic case | Label invented inputs and define the query before implementation |
-| Historical case | Identify the real source location and reuse conditions |
+| Explicit source requirement | Attribute a faithful paraphrase or short quotation to a precise passage |
+| Author-proposed implementation | Assess it as a proposed solution to an identified problem |
+| Project inference | State the inferential step and motivating case |
+| Synthetic case | Label invented inputs and fix the query before implementation |
+| Historical case | Identify the source location, interpretation and reuse conditions |
 
-## Header and schema declarations
+Each requirement record needs a stable ID, source or project rationale, passage locator where applicable, historical problem, scope, formal meaning, counterexample and expected observable behavior. Link it to experiments and acceptance evidence as these become available. The H01–H11 register belongs to [Specification](specification.md).
 
-The [corpus CSV](../research-artefacts/corpus.csv) owns source identities and reading status. Its `reading_status` vocabulary is `identified`, `partial`, `secondary_only` and `fully_analyzed`. A note registers the inspected sections. Full analysis requires both complete relevant reading and an integrated account of its implications.
+A reading record contains a source ID, consulted representation, inspected passages, paraphrase, unresolved interpretation and requirement links. Reading notes supply the evidence behind the register.
 
-Original publication and later access copies share a work ID but have separately described representation URLs. A local acquisition records its content hash and retrieval date in its source record before it is relied upon.
+## Source records
 
-## Unresolved phenomena
+The [corpus CSV](../research-artefacts/corpus.csv) owns source identities and reading states. Its vocabulary is `identified`, `partial`, `secondary_only` and `fully_analyzed`. Full analysis requires complete relevant reading and an integrated account of the implications.
 
-The basic unit, compatibility of uncertainty calculi, dependence between interpretations and meaning of conditional execution remain open. Algebraic properties such as distributivity or independence are established for a specified model rather than assumed.
+Distinguish the original publication from later access copies. A local acquisition records its representation URL, retrieval date and content hash before it is relied upon. [Source material](../source-material/README.md) owns acquisition and reuse conventions.
 
-The 2020 reading record needs completion. The 2018 contribution, Kleio system description and tutorial need primary-text analysis. The dissertation's role must be grounded in chapter-level evidence beyond the accessible abstract and earlier excerpts.
+## Unresolved research
 
-## Project-wide conventions
+The basic information unit, compatibility of uncertainty calculi, dependencies between interpretations and meaning of conditional execution remain open. Neither a factoid model nor a graph representation determines the answer in advance.
 
-Use the requirement IDs in the specification as the authoritative register. Reading notes supply evidence, and tests reference the relevant IDs.
+The 2020 record needs completion. The 2018 contribution, graph presentation and Kleio documentation need direct primary analysis. The dissertation's role needs chapter-level evidence beyond its accessible abstract and earlier excerpts. This documentation revision adds no primary reading.
 
-Select a historical financial source for the demonstrator, then include contrasting source forms when evaluating generality. Compare implementations using the same information, contexts and rules. Evaluate a harness separately from core semantics by keeping the underlying core and cases fixed.
+## Comparative evaluation
+
+Select a historical financial source with an addressable location scheme and recorded reuse conditions. Include contrasting source forms when testing generality.
+
+Compare relational, RDF or property-graph implementations using equivalent information, contexts and operations. Select concrete systems after the requirements are precise enough to make the comparison informative. Assess semantic preservation and modelling effort as well as performance.
+
+Hold the kernel and source cases fixed when evaluating the harness. Examine whether researchers can understand proposals, identify errors and revise decisions. A successful core test does not establish historical adequacy or prove that an agent interface improves scholarly work.

@@ -6,6 +6,8 @@ A source contribution identifies the work, the exact consulted representation, a
 
 Discuss changes to domain semantics through the specification before treating them as established behavior. Keep counterexamples that expose a limitation. Distinguish the effects of changing a model, a context, an operation or an agent harness in any evaluation.
 
+Website contributions follow the [website specification](knowledge/website-specification.md) and [design brief](knowledge/design.md). Keep proposed and implemented behavior distinguishable. Tutorials need verified commands and expected output, while canonical requirements remain in the knowledge base.
+
 Record substantive integrated changes in [the journal](knowledge/journal.md). Keep accepted next work in [the plan](knowledge/plan.md). Use [the handoff inbox](knowledge/handoff.md) for incoming material awaiting integration.
 
 Original text contributions follow CC BY 4.0 and project code follows MIT. Record source-specific terms before adding third-party material.

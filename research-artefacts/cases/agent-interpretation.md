@@ -1,6 +1,6 @@
 # Agent interpretation
 
-Synthetic case `CASE-AGENT-001`, proposed for H09, H10 and H11. The date and wording are invented.
+Synthetic case `CASE-AGENT-001`, proposed for H09, H10 and H11. The date and wording are invented. This case belongs to later harness evaluation and is outside the [minimum temporal prototype](../../knowledge/specification.md#minimum-prototype).
 
 ## Input and task
 
@@ -17,7 +17,7 @@ If the researcher changes the interval, the system records the revision and can 
 ## Expected evidence
 
 - The source representation remains addressable.
-- The actual model proposal and the invocation context are retained.
+- The actual model proposal and the invocation context are retained. A later model call is a separate activity and need not reproduce the proposal.
 - The proposal's interpretation of “about” is explicit.
 - The formal check and scholarly decision are distinguishable.
 - A later operation identifies which interpretation and rule version it used.

@@ -2,80 +2,73 @@
 
 *Knowledge-Led Exploration, Interpretation and Operationalisation of Historical Information*
 
-Ivory KLEIO is a research project for an agentic scholarly environment built around a database kernel for historical information. It investigates how source evidence, historical context and uncertainty can remain explicit throughout computation and revision.
+An agentic research environment with a database kernel for historical information.
 
-The name connects the [Ivory research programme](https://ivorytower.hypotheses.org/88) with source-oriented processing in [Kleio](https://www.uni-trier.de/fileadmin/fb3/GES/Grotum/kleio/HGR-A23.pdf). The project brings this connection into dialogue with the modelling of historical financial sources and with agent-mediated research.
+Ivory KLEIO investigates how source evidence, historical context and uncertainty can remain explicit through computation and revision. Its name connects the [Ivory programme](https://ivorytower.hypotheses.org/88) with source-oriented processing in [Kleio](https://www.uni-trier.de/fileadmin/fb3/GES/Grotum/kleio/HGR-A23.pdf).
 
-## Project status
+## Current status
 
-The repository currently contains the research specification, a preliminary source inventory, reading notes and synthetic acceptance cases. The database kernel and agentic application are proposed research targets. Rust is the selected language for the kernel.
+This repository contains the research foundation, a preliminary source inventory, reading notes and synthetic acceptance cases. Rust is selected for the core. The kernel, agent harness and GitHub Pages website are proposed development targets.
 
-Start with the [scientific proposal](research-artefacts/ivory-kleio-proposal.md) for the research argument or the [knowledge index](knowledge/INDEX.md) for the working documentation. The [work plan](knowledge/plan.md) records the current research task.
+Start with the [scientific one-pager](research-artefacts/ivory-kleio-proposal.md) for the argument, the [knowledge index](knowledge/INDEX.md) for maintained documentation, or the [work plan](knowledge/plan.md) for next work.
 
 ## The research problem
 
-Historical information is interpreted under conditions that affect the meaning of an operation. A monetary amount depends on its unit and historical context. A date may admit several readings. A conclusion may depend on an assumption that is later revised.
+A date may admit competing readings. A monetary amount depends on historical units and context. A conclusion can depend on an assumption that later changes. These conditions affect what a computation means.
 
-Consider a synthetic temporal example:
+Consider this synthetic example.
 
-| Recorded interpretation | Could the event have occurred in 1705? |
+| Recorded interpretation of one event | Could it have occurred in 1705? |
 |---|---|
-| The event occurred in either 1700 or 1710, with these alternatives exhaustive | No |
-| The event occurred sometime in the inclusive interval from 1700 to 1710 | Yes |
+| Either 1700 or 1710, with the alternatives exhaustive | No |
+| Any year in the inclusive interval from 1700 to 1710 | Yes |
 
-The query asks about possibility under the recorded interpretation. Replacing the alternatives with an interval changes the answer. Replacing either representation with a midpoint loses its uncertainty. The [complete case](research-artefacts/cases/temporal-alternatives.md) makes these assumptions explicit.
+The query asks about possibility under the recorded interpretation. Converting alternatives into an interval changes the answer. Replacing either with a midpoint discards its uncertainty. The [case](research-artefacts/cases/temporal-alternatives.md) states the assumptions and expected results.
 
-Ivory KLEIO investigates how such distinctions can be represented in data types and preserved by operations, queries and persistent storage.
+The research therefore concerns data structures and the semantics of operations, queries and persistent storage.
 
 ## Research objectives
 
-- Reconstruct the requirements of historical information through systematic primary-text analysis of the relevant Ivory and Kleio literature.
-- Formalise historical values and contexts, including different forms of uncertainty and dependencies between interpretations.
-- Define operations whose results retain their assumptions and source connections.
-- Develop a persistent kernel that supports queries, revisions and recovery of earlier research states.
-- Investigate an agentic environment in which researchers can inspect machine proposals and revise their decisions.
-- Evaluate the approach against carefully implemented alternatives using equivalent information and rules.
+1. Reconstruct historical information requirements through systematic primary reading of the relevant Ivory and Kleio corpus.
+2. Formalise values and contexts, including forms of uncertainty and dependencies between interpretations.
+3. Define operations whose results preserve their assumptions and source connections.
+4. Develop a persistent kernel with queries, revisions and recoverable research states.
+5. Investigate an agentic environment for inspecting proposals and revising scholarly decisions.
+6. Compare the approach with alternative implementations using equivalent information and rules.
 
-The [specification](knowledge/specification.md) distinguishes candidate requirements from established decisions. Historical financial sources provide the first intended demonstrator through the [dissertation on modelling historical information](https://unipub.uni-graz.at/obvugrhs/12127700) and the Bookkeeping Ontology. Additional source forms will be needed to assess generality.
+Historical financial sources provide the first intended application context through the [dissertation](https://unipub.uni-graz.at/obvugrhs/12127700) and the Bookkeeping Ontology. A concrete historical collection remains to be selected. The [source inventory](research-artefacts/corpus.csv) records incomplete reading states.
 
-## Proposed architecture
+## Database and research environment
 
-| Component | Intended responsibility |
+The Rust kernel will expose defined historical operations. Persistence and query execution will preserve their semantics across stored collections. An agent harness is the proposed primary research interface, connecting an LLM to those operations and maintaining context, tools and workflow state.
+
+The model can propose interpretations, query plans and explanations. The kernel evaluates declared operations under explicit assumptions. The research interface makes the sources and decisions inspectable. A model proposal, formal validation and scholarly adoption remain distinguishable.
+
+Model confidence does not directly quantify historical certainty. Retained model outputs document what occurred, while a new invocation may produce a different proposal. The kernel remains callable independently of an LLM.
+
+The [architecture](knowledge/architecture.md) describes these boundaries. The general information model, storage technology and harness runtime remain open.
+
+## First prototype and website
+
+The proposed [minimum prototype](knowledge/specification.md#minimum-prototype) is a Rust reference model for the temporal example. It retains source wording and interpretation, answers one year-membership query with a structured explanation, and preserves the result through JSON save and reload.
+
+This is the first semantic experiment. A database engine requires further persistence, query and revision behavior.
+
+The planned GitHub Pages site will explain the project, publish its specification and teach working examples. [Website specification](knowledge/website-specification.md) defines the learning paths, and [Design](knowledge/design.md) describes a proposed scholarly visual direction. A later browser demonstration should reuse the Rust operation through WebAssembly.
+
+## Repository structure
+
+| Location | Purpose |
 |---|---|
-| Rust kernel | Historical value types, explicit contexts, defined operations and derivations |
-| Persistence and query execution | Durable collections, revision retrieval and evaluation of queries |
-| Agent harness | Context selection, tool execution, workflow state and recorded feedback |
-| Large language model | Candidate interpretations, proposed query plans and explanations |
-| Research interface | Source inspection, comparison of alternatives and revision of scholarly decisions |
-
-An agent harness is the runtime that connects a model to its tools and working environment. It would give an LLM access to explicitly defined operations over the kernel.
-
-A researcher could ask the system to compare expenditure across account books and identify which differences depend on uncertain currency assignments. The agent would propose interpretations and operations. The kernel would evaluate them under stated assumptions, and the interface would expose the evidence and resulting dependencies.
-
-Machine-generated proposals, formal validation and scholarly adoption must remain distinguishable. Model confidence cannot be treated directly as a measure of historical certainty. The [agent interpretation case](research-artefacts/cases/agent-interpretation.md) develops this distinction.
-
-The kernel is intended to remain usable independently of an LLM. The underlying data model, physical storage technology and harness implementation remain open questions in the [architecture](knowledge/architecture.md).
-
-## Development through Promptotyping
-
-The project follows [Promptotyping](https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin). Its maintained knowledge documents supply the research context and specifications from which implementation proceeds.
-
-Primary reading establishes the requirements. Small experiments can test interpretations during that reading. A domain baseline requires documented evidence, defined behavior and review.
-
-| Location | Contents |
-|---|---|
-| [knowledge/](knowledge/INDEX.md) | Project purpose, requirements, architecture, research method and work continuity |
+| [knowledge/](knowledge/INDEX.md) | Maintained purpose, requirements, architecture, website brief, design, method and work continuity |
 | [research-artefacts/](research-artefacts/) | Scientific proposal, source inventory, reading notes and acceptance cases |
 | [source-material/](source-material/README.md) | Acquisition and reuse conventions for research inputs |
+| [AGENTS.md](AGENTS.md) | Shared working instructions for coding agents |
 
-The [corpus inventory](research-artefacts/corpus.csv) records the source representations and their reading states. Complete analysis remains part of the research programme.
+The project follows [Promptotyping](https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin). Small experiments can accompany primary reading. Adoption of the domain baseline requires documented evidence, defined behavior and review.
 
-## Contributing
+## Contributing and licensing
 
-Contributions can develop the source analysis, formalise an operation, supply a historical counterexample or implement a specified behavior. Each contribution should make its evidence and assumptions inspectable.
+Contributions can develop source analysis, formalise an operation, supply a counterexample or implement specified behavior. Read [CONTRIBUTING.md](CONTRIBUTING.md) and the [testing strategy](knowledge/testing.md).
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution process. Coding agents begin with [AGENTS.md](AGENTS.md), then the knowledge index and handoff inbox. The [testing strategy](knowledge/testing.md) distinguishes document consistency, formal correctness and scholarly validity.
-
-## License
-
-Original documentation and original research notes are licensed under [CC BY 4.0](LICENSE). Project code is licensed under [MIT](LICENSE-CODE). Third-party materials retain their own terms, recorded with their source.
+Original text uses [CC BY 4.0](LICENSE). Code uses [MIT](LICENSE-CODE). Third-party materials retain their own terms.

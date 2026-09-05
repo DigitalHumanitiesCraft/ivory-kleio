@@ -1,7 +1,7 @@
 ---
 title: Plan
 project:
-  name: Ivory Kleio
+  name: Ivory KLEIO
   repository: https://github.com/DigitalHumanitiesCraft/ivory-kleio
 method:
   name: Promptotyping
@@ -19,34 +19,39 @@ related: [specification, research-methodology, testing, journal, handoff]
 
 # Plan
 
-The next research task is to reconstruct the relevant primary corpus and establish precise requirements. The implementation sequence depends on that evidence.
+The documentation foundation is published in [DigitalHumanitiesCraft/ivory-kleio](https://github.com/DigitalHumanitiesCraft/ivory-kleio). The knowledge base now includes the proposed minimum prototype and the public website brief. No kernel, harness or website is implemented.
 
 ## Target
 
-Develop an executable model of historical information, then a persistent kernel and an agentic research workflow evaluated on explicit source cases.
+Develop an executable model of historical information, then an embedded database kernel and an agentic research workflow evaluated on explicit source cases. Publish documentation that teaches the behavior actually available.
 
-## Phases and milestones
+## Phases and evidence
 
-| Phase | Work | Evidence for proceeding |
+| Stage | Work | Evidence for proceeding |
 |---|---|---|
-| Source reconstruction | Complete the relevant primary reading and terminology comparison | Passage-level evidence and justified requirement candidates |
-| Reference semantics | Formalize a bounded value and its operations in Rust | Executable cases and stated algebraic properties |
-| Database kernel | Add persistence, query execution and revision behavior | Reopened collections and reproducible queries |
+| Source reconstruction | Inventory the relevant primary corpus, complete reading and compare terminology | Passage-level evidence, scope and justified requirements |
+| Reference semantics | Implement a bounded value and operation in Rust | Declared contract, distinguishing cases and preserved snapshot semantics |
+| Public documentation | Publish project explanation and research basis, then an executable tutorial | Accurate status, usable reading paths and a verified site build |
+| Database kernel | Add durable collections, queries and revisions | Reopened collections, recovery evidence and reproducible queries |
 | Agentic research | Connect a harness through explicit operations | Attributed proposals, inspectable outcomes and revision workflows |
-| Evaluation | Compare alternatives on the same source cases | Evidence for each claimed improvement and its limits |
+| Evaluation | Compare implementations and scholarly workflows | Evidence for each claimed improvement and its limits |
 
-Small semantic experiments can accompany the reading while retaining their hypothesis status.
+Small semantic experiments and website preparation can accompany the reading. Their existence does not establish the general domain model. Browser integration follows a working core operation. Harness integration follows a tested tool contract.
 
-## Work position
+## Next work
 
-The documentation foundation is published in [DigitalHumanitiesCraft/ivory-kleio](https://github.com/DigitalHumanitiesCraft/ivory-kleio). The local main branch tracks the verified origin. The project owner created the public repository, and the initial research history was published on 2026-09-05.
+1. Expand the [corpus inventory](../research-artefacts/corpus.csv), complete the [2020 reading record](../research-artefacts/reading-notes/thaller-2020-vagueness.md), and reconstruct the 2018 contribution and Kleio documentation. Ground dissertation-derived requirements in chapter-level evidence.
+2. Use the [minimum prototype](specification.md#minimum-prototype) as the proposed first implementation experiment. Record the Rust toolchain, implement one library and callable example, and verify the declared cases and JSON round trip.
+3. Implement the [website brief](website-specification.md) using the [proposed design](design.md). Record the framework decision and validate the initial rendered pages. Add runnable usage instructions when the reference model exists.
 
-Next, expand the [corpus inventory](../research-artefacts/corpus.csv) and complete the [2020 reading record](../research-artefacts/reading-notes/thaller-2020-vagueness.md). Read the 2018 contribution and Kleio documentation, then revise candidate requirements using precise passage locators.
+These are separate workstreams with stated dependencies. Current implementation work remains pending.
 
-## Open decisions and dependencies
+## Open decisions
 
-The domain model, uncertainty semantics, storage architecture and harness runtime remain open. A historical demonstrator requires an identified source and recorded reuse conditions. The first Rust experiment requires a selected available toolchain and a defined operation.
+The general object model, uncertainty semantics, storage architecture and harness runtime remain open. Astro with Starlight and a WebAssembly demonstration are technical proposals. The visual direction needs review against rendered pages.
 
-## Deviations
+A historical demonstrator requires an identified source and reuse conditions. The first temporal experiment deliberately uses synthetic year labels. Its success cannot establish historical calendar handling.
 
-The first repository is a documentation foundation. The previously sketched Cargo workspace follows with the first justified executable experiment, so its initial checks can exercise actual behavior.
+## Work continuity
+
+The public repository connection is verified. [Journal](journal.md) records the documentation consolidation and earlier transitions. [Handoff](handoff.md) contains only incoming changes still awaiting integration.
