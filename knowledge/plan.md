@@ -39,7 +39,7 @@ Small semantic experiments can accompany the reading while retaining their hypot
 
 ## Work position
 
-The local repository contains the documentation foundation. The destination is the public repository `DigitalHumanitiesCraft/ivory-kleio`, authorized by the project owner on 2026-09-05. The project owner is creating the GitHub repository. Connect and publish the local history after its creation is confirmed.
+The documentation foundation is published in [DigitalHumanitiesCraft/ivory-kleio](https://github.com/DigitalHumanitiesCraft/ivory-kleio). The local main branch tracks the verified origin. The project owner created the public repository, and the initial research history was published on 2026-09-05.
 
 Next, expand the [corpus inventory](../research-artefacts/corpus.csv) and complete the [2020 reading record](../research-artefacts/reading-notes/thaller-2020-vagueness.md). Read the 2018 contribution and Kleio documentation, then revise candidate requirements using precise passage locators.
 

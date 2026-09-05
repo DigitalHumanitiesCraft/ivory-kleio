@@ -23,6 +23,10 @@ Entries record substantive transitions and the evidence behind them. Future work
 
 ## Entries
 
+### 2026-09-05 integrated public repository
+
+The project owner created the public DigitalHumanitiesCraft/ivory-kleio repository. Its empty remote was connected to the local research repository, and the existing history was published on main. The remote branch was checked against the local commit before the repository mapping and work position were updated.
+
 ### 2026-09-05 integrated public README
 
 The project owner's request established an English README using the KLEIO expansion. The README now connects the research problem and objectives to the proposed kernel and agent harness, identifies the documentation foundation as the current implementation stage, and routes readers to the existing evidence and knowledge base.
