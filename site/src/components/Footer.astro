@@ -1,0 +1,10 @@
+---
+import Default from '@astrojs/starlight/components/Footer.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<Default />
+<footer class="project-footer">
+  <a class="footer-name" href={base + '/'}>Ivory KLEIO</a>
+  <p>A research project by <a href="https://dhcraft.org/">Digital Humanities Craft</a>.</p>
+  <div><a href="https://github.com/DigitalHumanitiesCraft/ivory-kleio/blob/main/LICENSE">Text CC BY 4.0</a><span aria-hidden="true"> · </span><a href="https://github.com/DigitalHumanitiesCraft/ivory-kleio/blob/main/LICENSE-CODE">Code MIT</a></div>
+</footer>

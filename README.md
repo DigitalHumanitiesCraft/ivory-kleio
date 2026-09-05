@@ -8,7 +8,7 @@ Ivory KLEIO investigates how source evidence, historical context and uncertainty
 
 ## Current status
 
-This repository contains the research foundation, a preliminary source inventory, reading notes and synthetic acceptance cases. Rust is selected for the core. The kernel, agent harness and GitHub Pages website are proposed development targets.
+This repository contains the research foundation and the source of its documentation website, a preliminary source inventory, reading notes and synthetic acceptance cases. Rust is selected for the core. The kernel and agent harness remain unimplemented. Website publication is pending the build and review work recorded in the [plan](knowledge/plan.md).
 
 Start with the [scientific one-pager](research-artefacts/ivory-kleio-proposal.md) for the argument, the [knowledge index](knowledge/INDEX.md) for maintained documentation, or the [work plan](knowledge/plan.md) for next work.
 
@@ -54,7 +54,7 @@ The proposed [minimum prototype](knowledge/specification.md#minimum-prototype) i
 
 This is the first semantic experiment. A database engine requires further persistence, query and revision behavior.
 
-The planned GitHub Pages site will explain the project, publish its specification and teach working examples. [Website specification](knowledge/website-specification.md) defines the learning paths, and [Design](knowledge/design.md) describes a proposed scholarly visual direction. A later browser demonstration should reuse the Rust operation through WebAssembly.
+The website presents the project as a research specification, with precise statements of scope, implementation status, requirements and sources. [Website specification](knowledge/website-specification.md) defines its contents, and [Design](knowledge/design.md) records the neutral document format. A later executable browser demonstration should reuse the Rust operation through WebAssembly.
 
 ## Repository structure
 
@@ -63,7 +63,10 @@ The planned GitHub Pages site will explain the project, publish its specificatio
 | [knowledge/](knowledge/INDEX.md) | Maintained purpose, requirements, architecture, website brief, design, method and work continuity |
 | [research-artefacts/](research-artefacts/) | Scientific proposal, source inventory, reading notes and acceptance cases |
 | [source-material/](source-material/README.md) | Acquisition and reuse conventions for research inputs |
+| [site/](site/) | Astro website, generated-source integration and verification scripts |
 | [AGENTS.md](AGENTS.md) | Shared working instructions for coding agents |
+
+Website setup and commands are documented in [Build this website](site/src/content/docs/contributing/website.md).
 
 The project follows [Promptotyping](https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin). Small experiments can accompany primary reading. Adoption of the domain baseline requires documented evidence, defined behavior and review.
 

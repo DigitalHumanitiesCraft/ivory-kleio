@@ -7,3 +7,7 @@
 CLAUDE.local.md
 .DS_Store
 Thumbs.db
+/site/node_modules/
+/site/dist/
+/site/.astro/
+/site/src/content/docs/generated/

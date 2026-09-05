@@ -1,0 +1,16 @@
+---
+import Search from '@astrojs/starlight/components/Search.astro';
+import ThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<div class="site-header">
+  <a class="wordmark" href={base + '/'} aria-label="Ivory KLEIO home">
+    <span>Ivory <strong>KLEIO</strong></span>
+  </a>
+  <nav class="top-links" aria-label="Main navigation">
+    <a href={base + '/generated/specification/'}>Specification</a>
+    <a href={base + '/generated/proposal/'}>Research</a>
+    <a href="https://github.com/DigitalHumanitiesCraft/ivory-kleio">Repository</a>
+  </nav>
+  <div class="header-tools"><Search /><ThemeSelect /></div>
+</div>

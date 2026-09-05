@@ -23,3 +23,5 @@ Inspect the source and target of each incoming delta. Integrate accepted materia
 ## Open handoff items
 
 No open handoff items.
+
+The website feedback and session-close request have been integrated. Resume through [Plan](plan.md), which records the incomplete production build and publication work.

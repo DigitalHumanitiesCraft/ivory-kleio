@@ -1,0 +1,56 @@
+---
+title: Ivory KLEIO
+description: Research specification for a historical information kernel and an agentic scholarly environment.
+lastUpdated: false
+---
+
+<p class="document-subtitle">Historical information kernel and research environment</p>
+
+| Document status | Research draft |
+|---|---|
+| Software status | Documentation implemented. Database kernel and agent harness pending. |
+| Core language | Rust |
+| Method | Promptotyping, primary-text analysis and executable acceptance cases |
+
+## Purpose
+
+Ivory KLEIO investigates the representation and processing of historical information. The intended kernel must preserve source attribution, contextual assumptions and distinctions between forms of uncertainty through operations and storage.
+
+An agent harness is proposed as a scholarly interface to the kernel. It would support the formulation and inspection of interpretations and operations. The kernel must also be usable independently of an LLM.
+
+## Scope of the specification
+
+The specification addresses historical values, their interpretation, the rules governing operations, and the persistence of their meaning. The relationships between source tokens, interpretations, assertions and entities remain under investigation.
+
+The current requirements are candidates. Adoption of a domain baseline depends on systematic analysis of the relevant Ivory and Kleio literature. The [source inventory](generated/sources/) records the consulted representations and their reading states.
+
+## Documents
+
+| Document | Contents |
+|---|---|
+| [Data and operations](generated/specification/) | Requirement register and proposed temporal operation |
+| [Architecture](generated/architecture/) | Component responsibilities and technical choices |
+| [Temporal acceptance case](generated/temporal-case/) | Synthetic inputs, expected results and failure conditions |
+| [Research methodology](generated/methodology/) | Source analysis, formalisation and comparative evaluation |
+| [Scientific proposal](generated/proposal/) | Research objectives and expected contribution |
+
+The public specification is generated from the maintained repository documents. Each generated page links to its canonical source.
+
+## First experimental contract
+
+The proposed Rust reference model distinguishes exhaustive temporal alternatives from an inclusive year interval.
+
+| Interpretation of one event | Could the event have occurred in 1705? |
+|---|---|
+| Exactly one of the years 1700 and 1710 applies | No |
+| Any year from 1700 through 1710 is possible | Yes |
+
+The values are synthetic. The question concerns possibility under the recorded interpretation. No probability distribution is assigned.
+
+The experiment must retain source wording and interpretation identifiers, return a structured explanation, and preserve the result through JSON save and reload. The [experimental contract](generated/specification/#minimum-prototype) defines its scope and error behavior.
+
+## Implementation boundary
+
+The website publishes the current documentation and worked examples. It does not execute historical database operations.
+
+The Rust reference model, persistent engine and agent harness remain unimplemented. Historical calendar handling, general uncertainty semantics and physical storage design are open research and engineering questions.

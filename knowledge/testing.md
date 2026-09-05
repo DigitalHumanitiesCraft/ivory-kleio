@@ -19,44 +19,51 @@ related: [specification, architecture, plan]
 
 # Testing
 
-Documentation integrity, formal operation behavior and scholarly validity require different evidence. [Specification](specification.md) owns expected behavior. This document owns how to assess it.
+Documentation integrity, operation behavior and scholarly validity require different evidence. [Specification](specification.md) owns expected behavior. This document owns verification procedures.
+
+## Website commands
+
+Use Node.js 24 and npm. From the repository root:
+
+```sh
+cd site
+npm ci
+npm run check
+npm test
+npm run build
+npm run check:links
+```
+
+Development uses `npm run dev`. The preparation hooks regenerate public content from canonical documents before development, checking and builds. Restart development after changing canonical documents outside the site.
+
+The content tests check source attribution, removal of duplicate titles and resolution of canonical cross-references. The built-link checker inspects page landmarks, local links, fragment destinations and assets under `/ivory-kleio/`.
+
+Run the production build to completion before accepting the link-check result. Pagefind and the sitemap are part of that build. The current session's verification state and remaining issues are recorded in [Plan](plan.md).
 
 ## Documentation checks
 
-For the current repository, check required knowledge metadata, nested project and method fields, process statuses, the index inventory and repository-relative Markdown links. Parse the corpus CSV and check its reading-state vocabulary and note paths. Review source claims against the recorded evidence.
+Check knowledge metadata, index coverage and repository-relative links. Validate corpus structure and reading states against recorded evidence. Run `git diff --check`. Public files must contain no machine-specific paths or unresolved private-vault links.
 
-Run `git diff --check` for whitespace errors. Check that public files contain no machine-specific paths or unresolved private-vault links. The index alone owns the common knowledge schema version.
+The index owns the common knowledge schema version. Generated website Markdown remains ignored and must be regenerated from its canonical source.
+
+## Website review
+
+The [website specification](website-specification.md) defines acceptance. Review the rendered specification entry, a reading page and the temporal example on narrow and wide screens. Verify keyboard navigation, focus, theme contrast, tables and search.
+
+A static explanatory example must remain identifiable as an acceptance case. An executable browser operation will later need agreement with the Rust reference fixtures.
 
 ## Reference model acceptance
 
-The [minimum prototype](specification.md#minimum-prototype) defines a proposed bounded contract. The [temporal case](../research-artefacts/cases/temporal-alternatives.md) supplies an independently stated result table.
+The [temporal case](../research-artefacts/cases/temporal-alternatives.md) independently specifies the expected results. When implemented, check the difference for 1705, endpoint agreement, exclusion outside represented possibilities and explicit result explanations.
 
-When implemented, meaningful checks must establish that the exhaustive alternatives and inclusive interval give different answers for 1705, agree at the endpoints, and reject years outside their represented possibilities. Check that structured explanations identify the input, interpretation and rule used.
-
-Test save and reload for preserved identifiers, original wording, temporal variant and operation result. Invalid intervals, empty alternatives, unsupported variants and unknown snapshot versions must produce the declared errors. Parsing failure must not become a historical false result.
-
-Add property-based checks only for justified properties. Do not weaken a case's expected result to fit an implementation.
+Save and reload must preserve identifiers, wording, domain and temporal variant. Invalid or unsupported inputs must yield declared errors. Add property checks only for justified properties.
 
 ## Engine and harness evaluation
 
-An engine must reproduce specified queries after closing and reopening a collection. Add revision, interrupted-write and recovery checks with the corresponding persistence mechanisms. Compare indexed evaluation against the reference operation.
+An engine must reproduce specified queries after reopening a collection. Add revision, interrupted-write and recovery checks with the corresponding mechanisms. Compare indexed queries against the reference evaluator.
 
-The [agent case](../research-artefacts/cases/agent-interpretation.md) belongs to later harness evaluation. Inspect the recorded model proposal, invocation context, formal validation and scholarly decision. Test whether a revised assumption leads to identifiable affected computations.
+The [agent case](../research-artefacts/cases/agent-interpretation.md) requires recorded proposals, invocation context, formal validation and scholarly decisions. A repeated model call is a new activity and may produce a different proposal.
 
-A retained invocation supports audit of what occurred. It does not guarantee identical output from a new model call. Core reproducibility uses stored values, explicit context and rule versions.
+## Evidence boundary
 
-## Website acceptance
-
-The [website specification](website-specification.md#acceptance) defines publication criteria. Once implemented, run the production build and check repository-subpath links and assets. Review the rendered landing page, reading page and temporal example on narrow and wide screens, including keyboard navigation.
-
-Verify browser results against the same reference fixtures used by Rust. Tutorials must reproduce actual commands and expected output at their documented revision. A static explanatory table must not be presented as a running demonstration.
-
-## Evidence and limits
-
-The current repository has synthetic cases and documentation. No implemented Rust operation, database engine, harness or website has yet been evaluated.
-
-A passing document check establishes consistency. A passing operation test establishes the specified behavior within its scope. Historical validity requires source interpretation and domain review. Claims of improved performance or usability require comparative evidence.
-
-## Executable commands
-
-The only current generic repository command is `git diff --check`. Compilation, test and website commands will be documented here when their build configuration and implementation exist. [Plan](plan.md) records the work position, and [Journal](journal.md) records substantive transitions.
+A passing document check establishes consistency. An operation test establishes behavior within its defined scope. Historical validity requires primary evidence and domain review. Comparative claims about performance or usability require separate evaluation.

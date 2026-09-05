@@ -19,39 +19,31 @@ related: [specification, research-methodology, testing, journal, handoff]
 
 # Plan
 
-The documentation foundation is published in [DigitalHumanitiesCraft/ivory-kleio](https://github.com/DigitalHumanitiesCraft/ivory-kleio). The knowledge base now includes the proposed minimum prototype and the public website brief. No kernel, harness or website is implemented.
+The repository contains the research foundation and an Astro/Starlight website implementation. The entry page was revised into a neutral research specification following the project owner's feedback. The Rust kernel and harness remain unimplemented.
 
-## Target
+## Work position
 
-Develop an executable model of historical information, then an embedded database kernel and an agentic research workflow evaluated on explicit source cases. Publish documentation that teaches the behavior actually available.
+The session closed on 2026-09-05 at the project owner's request. Type checking and the content transformation tests passed. The local development route returned HTTP 200.
 
-## Phases and evidence
+The production build generated HTML but failed while starting Pagefind. The final local error was `spawn EFTYPE`, following an earlier `spawn EBUSY` during dependency installation. The output is incomplete and must not be published.
 
-| Stage | Work | Evidence for proceeding |
-|---|---|---|
-| Source reconstruction | Inventory the relevant primary corpus, complete reading and compare terminology | Passage-level evidence, scope and justified requirements |
-| Reference semantics | Implement a bounded value and operation in Rust | Declared contract, distinguishing cases and preserved snapshot semantics |
-| Public documentation | Publish project explanation and research basis, then an executable tutorial | Accurate status, usable reading paths and a verified site build |
-| Database kernel | Add durable collections, queries and revisions | Reopened collections, recovery evidence and reproducible queries |
-| Agentic research | Connect a harness through explicit operations | Attributed proposals, inspectable outcomes and revision workflows |
-| Evaluation | Compare implementations and scholarly workflows | Evidence for each claimed improvement and its limits |
+The built-link check reports the missing sitemap from that incomplete build and a 404 canonical destination mismatch. Visual review of the revised specification layout and keyboard review remain pending.
 
-Small semantic experiments and website preparation can accompany the reading. Their existence does not establish the general domain model. Browser integration follows a working core operation. Harness integration follows a tested tool contract.
+GitHub Pages has not been configured or published. The workflow checks pushes and pull requests. Publication requires a manual run after the build and review criteria are satisfied.
 
 ## Next work
 
-1. Expand the [corpus inventory](../research-artefacts/corpus.csv), complete the [2020 reading record](../research-artefacts/reading-notes/thaller-2020-vagueness.md), and reconstruct the 2018 contribution and Kleio documentation. Ground dissertation-derived requirements in chapter-level evidence.
-2. Use the [minimum prototype](specification.md#minimum-prototype) as the proposed first implementation experiment. Record the Rust toolchain, implement one library and callable example, and verify the declared cases and JSON round trip.
-3. Implement the [website brief](website-specification.md) using the [proposed design](design.md). Record the framework decision and validate the initial rendered pages. Add runnable usage instructions when the reference model exists.
+1. Restore and verify the local Pagefind installation using the committed package manifest and lockfile. Complete the production build, resolve the 404 canonical destination and rerun built-link checks.
+2. Review the neutral specification layout on narrow and wide screens, including navigation, search and keyboard use. Configure GitHub Pages and publish through the manual workflow after verification.
+3. Expand the [corpus inventory](../research-artefacts/corpus.csv) and complete the relevant primary reading. Ground dissertation-derived requirements in chapter-level evidence.
+4. Implement the proposed [minimum prototype](specification.md#minimum-prototype) with an explicitly selected Rust toolchain and the specified acceptance cases.
 
-These are separate workstreams with stated dependencies. Current implementation work remains pending.
+## Research dependencies
 
-## Open decisions
+Adoption of a domain baseline depends on systematic reconstruction of the relevant primary corpus. Small semantic experiments can accompany that reading as bounded hypotheses. Browser execution follows a tested Rust operation. Harness integration follows an explicit tool contract.
 
-The general object model, uncertainty semantics, storage architecture and harness runtime remain open. Astro with Starlight and a WebAssembly demonstration are technical proposals. The visual direction needs review against rendered pages.
+The general object model, uncertainty semantics, storage architecture and harness runtime remain open. A historical demonstrator needs an identified source and reuse conditions.
 
-A historical demonstrator requires an identified source and reuse conditions. The first temporal experiment deliberately uses synthetic year labels. Its success cannot establish historical calendar handling.
+## Continuity
 
-## Work continuity
-
-The public repository connection is verified. [Journal](journal.md) records the documentation consolidation and earlier transitions. [Handoff](handoff.md) contains only incoming changes still awaiting integration.
+[Testing](testing.md) owns commands and their limits. [Journal](journal.md) records the website implementation and the owner's design correction. The handoff inbox is reserved for incoming material still awaiting integration. The continuation work above is already integrated.

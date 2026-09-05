@@ -113,9 +113,11 @@ This provides bounded evidence for H01, H02, H05 and H08. Snapshot round trips d
 | Core language | Rust | Established |
 | Licensing | Original text CC BY 4.0, code MIT | Established |
 | Domain baseline | Requires systematic reconstruction of the relevant primary corpus | Established research constraint |
-| Current implementation | Documentation, source inventory and synthetic cases | Observed |
+| Current implementation | Website source, documentation, source inventory and synthetic cases | Observed |
 | First executable target | Temporal alternatives, one operation and JSON round trip | Proposed experiment |
 | Research interface | Agent harness over independently callable kernel operations | Proposed direction |
-| Website | Professional public documentation and learning resource | Requested |
-| Site framework and browser adapter | Astro with Starlight, later Rust WebAssembly | Proposed technical choices |
+| Website format | Neutral research specification with factual, precise text | Established by project owner |
+| Site framework | Astro with Starlight, npm and Node.js 24 | Implemented source |
+| Website publication | Build completion and review remain pending | Open |
+| Browser operation adapter | Rust WebAssembly | Proposed technical choice |
 | General object model, storage and harness runtime | Determine from requirements and experiments | Open |

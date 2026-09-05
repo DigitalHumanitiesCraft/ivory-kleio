@@ -41,6 +41,8 @@ Ivory KLEIO connects historical information modelling with an agentic research e
 
 `knowledge/` contains maintained project knowledge. `research-artefacts/` contains the [corpus inventory](../research-artefacts/corpus.csv), reading records and synthetic cases. [Source material](../source-material/README.md) records acquisition and reuse. Local downloads use the ignored `source-material/local/` location.
 
+`site/` contains the website source. Its preparation script renders selected canonical documents and the corpus into ignored generated Markdown. [Build this website](../site/src/content/docs/contributing/website.md) describes maintenance.
+
 The root [AGENTS.md](../AGENTS.md) provides the shared action layer. [CLAUDE.md](../CLAUDE.md) routes to it for runtimes that load that filename.
 
 ## Reading paths
@@ -53,7 +55,7 @@ The knowledge base follows the [Promptotyping document templates](https://dhcraf
 
 The common document schema version is owned by this index. Sibling documents inherit it. Their content dates and template versions remain independent. A future formal data or operation contract will have its own explicitly declared version.
 
-This repository owns the current project purpose, requirements, architecture and their evidence. The [scientific proposal](../research-artefacts/ivory-kleio-proposal.md) and README present that maintained knowledge for different reading tasks. The public site will render canonical specifications and provide separately authored tutorials. Private workspace notes route to this repository and retain broader theoretical connections. Public contributors need no private workspace access.
+This repository owns the current project purpose, requirements, architecture and their evidence. The [scientific proposal](../research-artefacts/ivory-kleio-proposal.md) and README present that maintained knowledge for different reading tasks. The website renders canonical specifications and separately authored explanations. Executable tutorials follow working software. Private workspace notes route to this repository and retain broader theoretical connections. Public contributors need no private workspace access.
 
 ## Terms
 

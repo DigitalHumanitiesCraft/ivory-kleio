@@ -19,42 +19,30 @@ related: [website-specification, architecture, testing]
 
 # Design
 
-The proposed website should read as a scholarly software publication. Source evidence, readable explanations and inspectable operations guide the design.
-
-This brief is a draft direction from the project discussion. It has not been validated through rendered pages or user observation. [Website specification](website-specification.md) owns content and acceptance, while [Architecture](architecture.md) owns the proposed stack.
+The website presents a research specification. The project owner requested factual, neutral and precise text and rejected a marketing-style landing page during review of the first local preview.
 
 ## Design approach
 
-Use generous reading space and a clear hierarchy. Introduce the historical problem through an example, then reveal the formal distinction and operation. Keep citations close to the claims they support.
+The entry page states the subject, document status, software status and scope, then links to the formal documents. Headings identify their contents. Claims distinguish implemented behavior, proposed contracts and open research.
 
-The overview can have a distinctive project identity. Documentation pages need predictable navigation and enough space for sources, code and result explanations. Show project status plainly wherever an unavailable capability could otherwise be inferred.
+The design uses a continuous document layout with section navigation and a table of contents. Tables compare requirements, component responsibilities and expected results. Decorative feature blocks, slogans and promotional calls to action are excluded.
 
 ## Design system
 
-A warm ivory background, dark text and a restrained petrol accent form the proposed palette. The accent supports navigation, focus and selected states. Contrast must be checked on rendered pages.
+Source Serif 4 supplies document headings and the subtitle. DM Sans supplies body text and navigation. Fonts are served from the website. A restrained neutral background, dark text and petrol links form the light palette. A corresponding dark palette follows the reader's theme preference.
 
-Serif headings can connect the research presentation to scholarly reading. A legible sans-serif face serves navigation and body documentation, with a monospace face for code and exact values. Concrete font choices and design tokens belong to the implementation after visual review.
-
-Use a compact top navigation, section navigation on the left and a page contents panel on the right where space permits. Narrow layouts should retain a clear route through the document and place supplementary navigation behind accessible controls.
-
-Tables explain comparisons. Code blocks show real commands or labelled proposed structures. Status text distinguishes experimental contracts from implemented behavior.
+Concrete typography, spacing and colour values are maintained in [the stylesheet](../site/src/styles/theme.css). Borders distinguish document sections and table rows. The interface uses square or minimally rounded controls.
 
 ## Interaction patterns
 
-The temporal example keeps source wording, interpretation, query and result visibly connected. The selected interpretation must remain explicit when the query changes.
+Navigation opens specifications, research records and worked examples. The search indexes published text. The temporal example presents documented expected results and identifies its synthetic inputs. It does not imply that a database operation runs in the browser.
 
-The result panel displays the answer together with the applied rule and input values. An error explains which input is invalid. Neither a negative answer nor a validation error should visually imply a scholarly judgement beyond the declared operation.
+The later harness interface requires its own workflow design. Its proposed controls are not part of the current website.
 
-A future harness interface should make proposed actions, formal results and scholarly decisions individually inspectable. Its detailed design follows observed research workflows and is outside the initial documentation implementation.
+## Review state
 
-## Visualisation logic
-
-Use aligned alternatives and interval bounds to show the temporal distinction. Any graphic must have an equivalent textual explanation. An interval drawing must not imply that exhaustive alternatives include the intervening years.
-
-Use diagrams where they explain dependencies or component boundaries. Source and derivation views should retain accessible text and links to their evidence.
+The initial marketing presentation was replaced after the project owner's feedback. The revised specification layout still needs visual review on narrow and wide screens and keyboard review. Its implementation status and reproducible checks are recorded in [Plan](plan.md) and [Testing](testing.md).
 
 ## Action-layer integration
 
-When implementing or changing the website, read this brief together with the website specification. Use the actual rendered result to assess the proposed direction, then record any adopted design choices here and their concrete values in code.
-
-Check keyboard navigation, visible focus, contrast, narrow-screen reading and the clarity of example states. Keep the current draft status until those checks and design review provide evidence for a stronger claim.
+Website changes follow this direction and the [website specification](website-specification.md). Use precise headings and prose. Keep canonical research claims in their owning knowledge documents, and verify their public rendering after changes.

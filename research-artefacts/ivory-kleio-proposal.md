@@ -21,7 +21,7 @@ Implementation begins with a bounded Rust reference model. The proposed first ex
 
 A persistent embedded kernel follows from demonstrated semantics. Its object model, physical storage and harness runtime remain research questions. The kernel stays callable without an LLM. Model confidence does not determine historical certainty, and a retained invocation records an actual proposal rather than guaranteeing its regeneration.
 
-Historical financial sources are the first intended demonstrator. Contrasting source forms will test generality. Relational and graph-based comparisons will use equivalent information and rules. Harness evaluation will hold the core fixed and examine whether researchers understand proposals, detect errors and revise decisions. The planned public website will explain the research and teach verified operations.
+Historical financial sources are the first intended demonstrator. Contrasting source forms will test generality. Relational and graph-based comparisons will use equivalent information and rules. Harness evaluation will hold the core fixed and examine whether researchers understand proposals, detect errors and revise decisions. The documentation website presents the research specification. Tutorials for executable operations follow working software.
 
 The expected contribution is a source-grounded requirements specification and an evaluated computational account of historical information, together with an inspectable agentic workflow. Claims of originality and practical value depend on those comparisons.
 

@@ -23,6 +23,14 @@ Entries record substantive transitions and the evidence behind them. Future work
 
 ## Entries
 
+### 2026-09-05 integrated website source and session close
+
+The project owner requested website implementation, then rejected the first preview's marketing presentation. The entry page was replaced with a neutral research specification describing purpose, scope, implementation status, documents and the temporal contract. The design brief now requires factual, precise language and excludes slogans and promotional feature blocks.
+
+The website uses Astro and Starlight, self-hosted font packages, canonical Markdown generation, a corpus rendering and Pagefind search integration. npm scripts and a GitHub Actions workflow record its verification and manual publication path. The Rust kernel and harness remain unimplemented, and source reading states are unchanged.
+
+The owner then requested a controlled session close, updated project Markdown and ACTIVE-WORK, and commits and pushes in both repositories. Type checking and content tests passed. The production build remained incomplete because the local Pagefind program failed to start. The built-link check additionally identified the resulting missing sitemap and a 404 canonical destination mismatch. Visual review and publication remain in [Plan](plan.md). Local task processes are stopped for closure.
+
 ### 2026-09-05 integrated documentation refactor
 
 The project owner requested consolidation after the naming, harness, website and prototype discussion. The knowledge base now uses Ivory KLEIO consistently and separates scientific purpose, requirements, architecture, website content and design. The README and one-pager present the same maintained project scope. Private workspace project notes route to the public repository rather than maintaining a competing specification.
