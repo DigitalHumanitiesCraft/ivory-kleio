@@ -23,6 +23,10 @@ Entries record substantive transitions and the evidence behind them. Future work
 
 ## Entries
 
+### 2026-09-05 integrated public README
+
+The project owner's request established an English README using the KLEIO expansion. The README now connects the research problem and objectives to the proposed kernel and agent harness, identifies the documentation foundation as the current implementation stage, and routes readers to the existing evidence and knowledge base.
+
 ### 2026-09-05 integrated research foundation
 
 The project owner's proposal and follow-up discussion were distilled into the project, specification, architecture and research methodology. The working name is Ivory Kleio. The owner authorized a public repository under DigitalHumanitiesCraft. Rust remains selected for the core, and an agentic research environment is represented as an architectural hypothesis. The initial source inventory records partial reading honestly. Synthetic temporal and agent-provenance cases make the first acceptance questions explicit.

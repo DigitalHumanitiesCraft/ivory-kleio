@@ -65,7 +65,7 @@ The first executable research target is a reference model. A persistent embedded
 
 ## Terms
 
-Ivory Kleio is the working project name and `ivory-kleio` is the repository name. The name signals a connection to the published research. Compatibility with historical Kleio formats would be a separately specified feature.
+Ivory KLEIO is the working project name and `ivory-kleio` is the repository name. KLEIO expands to Knowledge-Led Exploration, Interpretation and Operationalisation, qualified by the domain of historical information. Ivory retains its connection to the published research programme. Compatibility with historical Kleio formats would be a separately specified feature.
 
 ## License
 
