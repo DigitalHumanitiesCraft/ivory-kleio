@@ -1,0 +1,40 @@
+{
+  "format_version": 1,
+  "records": [
+    {
+      "record_id": "CASE-TIME-001-A",
+      "domain": "synthetic-years-v1",
+      "source": {
+        "source_id": "CASE-TIME-001",
+        "locator": "record A",
+        "wording": "in 1700 or 1710",
+        "origin": "synthetic"
+      },
+      "interpretation": {
+        "interpretation_id": "CASE-TIME-001-A-alternatives",
+        "temporal": {
+          "kind": "exclusive_alternatives",
+          "years": [1700, 1710]
+        }
+      }
+    },
+    {
+      "record_id": "CASE-TIME-001-B",
+      "domain": "synthetic-years-v1",
+      "source": {
+        "source_id": "CASE-TIME-001",
+        "locator": "record B",
+        "wording": "between 1700 and 1710, inclusive",
+        "origin": "synthetic"
+      },
+      "interpretation": {
+        "interpretation_id": "CASE-TIME-001-B-interval",
+        "temporal": {
+          "kind": "inclusive_interval",
+          "lower": 1700,
+          "upper": 1710
+        }
+      }
+    }
+  ]
+}

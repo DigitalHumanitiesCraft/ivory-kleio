@@ -1,0 +1,47 @@
+name: Check temporal prototype
+
+on:
+  push:
+    paths:
+      - 'Cargo.toml'
+      - 'Cargo.lock'
+      - 'rust-toolchain.toml'
+      - 'src/**'
+      - 'tests/**'
+      - 'knowledge/specification.md'
+      - 'knowledge/temporal-specification.md'
+      - 'knowledge/testing.md'
+      - 'research-artefacts/cases/temporal-alternatives.*'
+      - '.github/workflows/rust.yml'
+  pull_request:
+    paths:
+      - 'Cargo.toml'
+      - 'Cargo.lock'
+      - 'rust-toolchain.toml'
+      - 'src/**'
+      - 'tests/**'
+      - 'knowledge/specification.md'
+      - 'knowledge/temporal-specification.md'
+      - 'knowledge/testing.md'
+      - 'research-artefacts/cases/temporal-alternatives.*'
+      - '.github/workflows/rust.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  temporal:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install the declared toolchain
+        run: rustup show
+      - run: cargo fetch --locked
+      - run: cargo fmt --all -- --check
+      - run: cargo clippy --locked --offline --all-targets -- -D warnings
+      - run: cargo test --locked --offline --all-targets
+      - run: cargo test --locked --offline --doc

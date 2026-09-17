@@ -3,7 +3,7 @@ title: Temporal alternatives
 description: Why “1700 or 1710” and “between 1700 and 1710” allow different conclusions.
 ---
 
-Two interpretations can share their earliest and latest dates while permitting different answers. This synthetic example is the first proposed semantic experiment for Ivory KLEIO.
+Two interpretations can share their earliest and latest dates while permitting different answers. This synthetic example is implemented in the first Rust semantic experiment for Ivory KLEIO.
 
 ## Read the source wording
 
@@ -43,8 +43,8 @@ Converting A into the interval B introduces possibilities that A did not contain
 
 ## Preserve the explanation
 
-The proposed operation returns an answer with the selected interpretation, query year and applied rule. It retains a path to the original wording and source location. Saving and loading the record should preserve this meaning.
+The operation returns an answer with the selected interpretation, query year and applied rule. It includes the original wording and source location. The executable example saves the records, reopens them and checks that both the records and complete query results remain equal.
 
-This is a worked acceptance example. It is not a running database demonstration. The first Rust implementation is still pending. The browser version will later call the same Rust operation through WebAssembly.
+This page is a static explanation of the acceptance case. Run the Rust implementation from a local checkout using the [example command](../../generated/testing/#reference-model-acceptance). Browser execution through WebAssembly remains proposed.
 
-Read the [experimental contract](../../generated/specification/#minimum-prototype) for its input boundaries and errors, or the [complete acceptance case](../../generated/temporal-case/) for the expected persistence behavior.
+Read the [experimental contract](../../generated/temporal-specification/) for its input boundaries and errors, or the [complete acceptance case](../../generated/temporal-case/) for the expected persistence behavior.

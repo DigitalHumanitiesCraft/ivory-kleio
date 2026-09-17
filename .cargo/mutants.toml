@@ -1,0 +1,3 @@
+examine_globs = ["src/lib.rs"]
+exclude_re = ["<impl std::error::Error for Error>::source"]
+additional_cargo_args = ["--locked", "--offline"]

@@ -2,7 +2,8 @@ export const repository = 'https://github.com/DigitalHumanitiesCraft/ivory-kleio
 export const base = '/ivory-kleio';
 export const documents = [
   { source: 'knowledge/project.md', slug: 'project', title: 'Research objectives', description: 'The scientific purpose and product boundary of Ivory KLEIO.' },
-  { source: 'knowledge/specification.md', slug: 'specification', title: 'Data and operations', description: 'Requirement candidates and the proposed minimum temporal prototype.' },
+  { source: 'knowledge/specification.md', slug: 'specification', title: 'Requirements', description: 'Research requirements, scope and adoption criteria.' },
+  { source: 'knowledge/temporal-specification.md', slug: 'temporal-specification', title: 'Temporal contract', description: 'Versioned data, operations, errors and acceptance for the temporal experiment.' },
   { source: 'knowledge/architecture.md', slug: 'architecture', title: 'Architecture', description: 'The kernel, persistence, agent harness and documentation website.' },
   { source: 'knowledge/research-methodology.md', slug: 'methodology', title: 'Research methodology', description: 'How primary reading, formalisation and comparative evaluation inform the project.' },
   { source: 'knowledge/testing.md', slug: 'testing', title: 'Testing and evaluation', description: 'What documentation checks, executable cases and scholarly evaluation establish.' },

@@ -1,0 +1,22 @@
+name: Audit temporal mutations
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  mutations:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: rustup show
+      - run: cargo fetch --locked
+      - run: cargo install cargo-mutants --version 27.1.0 --locked
+      - run: cargo mutants --no-shuffle --no-times --output target/mutation-audit
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: temporal-mutation-audit
+          path: target/mutation-audit/mutants.out/

@@ -8,7 +8,7 @@ lastUpdated: false
 
 | Document status | Research draft |
 |---|---|
-| Software status | Documentation implemented. Database kernel and agent harness pending. |
+| Software status | Documentation and bounded Rust temporal experiment implemented. General database engine and agent harness pending. |
 | Core language | Rust |
 | Method | Promptotyping, primary-text analysis and executable acceptance cases |
 
@@ -28,7 +28,8 @@ The current requirements are candidates. Adoption of a domain baseline depends o
 
 | Document | Contents |
 |---|---|
-| [Data and operations](generated/specification/) | Requirement register and proposed temporal operation |
+| [Requirements](generated/specification/) | Research requirements and adoption criteria |
+| [Temporal contract](generated/temporal-specification/) | Versioned data, operation, errors and acceptance |
 | [Architecture](generated/architecture/) | Component responsibilities and technical choices |
 | [Temporal acceptance case](generated/temporal-case/) | Synthetic inputs, expected results and failure conditions |
 | [Research methodology](generated/methodology/) | Source analysis, formalisation and comparative evaluation |
@@ -38,7 +39,7 @@ The public specification is generated from the maintained repository documents. 
 
 ## First experimental contract
 
-The proposed Rust reference model distinguishes exhaustive temporal alternatives from an inclusive year interval.
+The Rust reference model distinguishes exhaustive temporal alternatives from an inclusive year interval.
 
 | Interpretation of one event | Could the event have occurred in 1705? |
 |---|---|
@@ -47,10 +48,10 @@ The proposed Rust reference model distinguishes exhaustive temporal alternatives
 
 The values are synthetic. The question concerns possibility under the recorded interpretation. No probability distribution is assigned.
 
-The experiment must retain source wording and interpretation identifiers, return a structured explanation, and preserve the result through JSON save and reload. The [experimental contract](generated/specification/#minimum-prototype) defines its scope and error behavior.
+The experiment retains source wording and interpretation identifiers, returns a structured explanation, and checks preservation through JSON save and reload. The [experimental contract](generated/temporal-specification/) defines its scope and error behavior. [Testing](generated/testing/#reference-model-acceptance) provides the executable example command.
 
 ## Implementation boundary
 
 The website publishes the current documentation and worked examples. It does not execute historical database operations.
 
-The Rust reference model, persistent engine and agent harness remain unimplemented. Historical calendar handling, general uncertainty semantics and physical storage design are open research and engineering questions.
+The Rust reference model runs from a local checkout. The persistent engine and agent harness remain unimplemented. Historical calendar handling, general uncertainty semantics and physical storage design are open research and engineering questions.

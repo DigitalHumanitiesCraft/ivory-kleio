@@ -13,7 +13,7 @@ template:
 status: active
 language: en
 created: 2026-09-05
-updated: 2026-09-05
+updated: 2026-09-17
 related: [project, specification, plan, handoff]
 ---
 
@@ -22,6 +22,32 @@ related: [project, specification, plan, handoff]
 Entries record substantive transitions and the evidence behind them. Future work is maintained in [Plan](plan.md), and incoming deltas are processed through [Handoff](handoff.md).
 
 ## Entries
+
+### 2026-09-17 integrated deterministic testing and knowledge refactor
+
+The project owner requested implementation of the deterministic test strategy and a refactor of the knowledge base. Separate GPT-6 tasks authored finite-model/reference tests and process tests; another task reviewed their oracles, contracts and document boundaries. The integration pass exercised the combined result.
+
+The temporal contract moved from the general specification into [Temporal specification](temporal-specification.md) without losing its input, error, provenance or acceptance obligations. It now states determinism and the equivalence relation for each comparison. The general specification retains H01–H11, adoption criteria and a short `minimum-prototype` route. Its duplicate decision table became an ownership map. [Index](INDEX.md) identifies six core documents; website documents retain their separate purpose, and the handoff inbox contains only its empty state. Material descriptions remain in the corpus, cases and fixtures. No additional governance, data or verification document was justified by this experiment. Agent routing, contributing guidance, canonical cross-references and the website map/sidebar were updated together.
+
+The command-line example became the Cargo binary `ivory-temporal` so integration tests can invoke the built process directly. Isolated temporary directories make those tests repeatable. Fixed v1 inputs and independently written structured expected results check both serialization and evaluation. The generated model tests enumerate all nonempty alternative subsets and inclusive intervals in the windows 1–8, 1700–1707 and 9992–9999, with selected permutations, neighboring queries and domain endpoints. Bitmasks and materialized sets provide independent oracles. Review corrected success-path CLI comparisons from bytes to structured JSON equality; unchanged input and protected destination files retain byte-preservation assertions.
+
+Observed local evidence uses Rust 1.98.1 on Linux through WSL. All 31 tests passed, including 8 real-process tests, 4 finite-model tests, 3 fixed-reference tests and the existing 16 contract tests. Repeated runs passed with `--locked --offline`. Formatting and Clippy with warnings denied also passed. The generated domains contain 765 nonempty subsets and 108 intervals. The evidence is exhaustive within those windows and declared query sets, with selected orderings; it is not a proof over all interpretations of the full year domain.
+
+Cargo-mutants 27.1.0 audited the configured library scope in scratch copies with an unmutated baseline. Of 20 generated mutations, 17 compiled and were caught by failing tests; 3 were unviable and supply no detection evidence. There were no surviving or timed-out mutations. The standard error-source chaining method is excluded from this audit's semantic scope. The report is reproducible under ignored `target/mutation-audit/`; its mutation set does not enumerate all possible defects. The normal cross-platform workflow and a separate manual mutation workflow encode the procedures. Hosted CI and native Windows execution have not been observed.
+
+The website's type check and three content tests passed. Its complete production build produced the new temporal-contract route, search index and sitemap. The existing 404 canonical mismatch was reproduced and corrected in that page's head metadata to point to 404.html; the built-link checker then passed for 20 pages and 1000 local links/assets. The framework still warns about overlapping 404 routes. Visual/keyboard acceptance and publication remain open. This transition added no primary-source reading or scholarly acceptance.
+
+### 2026-09-17 integrated temporal reference model
+
+The project owner authorized implementation of the bounded dating experiment and the use of GPT-6 subagents. Implementation, contract-test authorship and conceptual/code review were assigned separately. The integration pass compiled and exercised their combined result. The existing temporal case supplied the semantic oracle; this work added no primary-source reading.
+
+[Temporal specification](temporal-specification.md#data-contract-v1) now defines the versioned JSON shape, synthetic domain, rule identifier, result fields and errors. A single Rust crate implements raw temporal records, semantic validation and `could_occur_in_year`. The file-based example saves and reopens a snapshot and compares both records and complete results. The fixture retains the invented wording and locators of `CASE-TIME-001`. The compiler is pinned to Rust 1.98.1, and Cargo.lock fixes dependency resolution.
+
+Independent review identified an unspecified integer representation boundary, Serde's positional-array decoding and an overly broad serialization-validation claim. The contract now states the signed 32-bit representation and distinguishes parser failures from out-of-domain years. The supported loader rejects positional arrays while preserving duplicate-field diagnostics. Both the contract and API documentation identify `Snapshot::from_json`, `Snapshot::to_json` and the query function as validated entry points. Generic Serde conversion remains structural. Focused rereview found these issues resolved.
+
+Local evidence was obtained on Linux through WSL. All 16 contract tests passed, including the full finite year domain, singleton boundaries, malformed inputs and exact source preservation. Formatting and Clippy with warnings denied passed. The actual file example returned false for alternatives and true for the interval at 1705, with `round_trip_verified: true`. Additional CLI checks rejected invalid records, invalid queries including an empty collection, and missing input without creating an output. An existing destination remained byte-for-byte unchanged. Reopening a previously saved snapshot and processing a valid empty snapshot also succeeded. The website's three content transformation tests passed after its status text was updated.
+
+The Rust workflow is configured for Linux and Windows, but hosted CI and native Windows execution have not been observed. The website production build and publication remain open. Evidence for H05 covers one possibility predicate; H08 covers a JSON round trip. General database behavior, historical adequacy and scholarly acceptance remain outside the verified result. The maintained specification, architecture, testing document, README and website source now describe that same boundary.
 
 ### 2026-09-05 integrated website source and session close
 

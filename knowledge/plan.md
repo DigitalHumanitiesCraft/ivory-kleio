@@ -13,37 +13,26 @@ template:
 status: active
 language: en
 created: 2026-09-05
-updated: 2026-09-05
-related: [specification, research-methodology, testing, journal, handoff]
+updated: 2026-09-17
+related: [specification, temporal-specification, research-methodology, testing, journal, handoff]
 ---
 
 # Plan
 
-The repository contains the research foundation and an Astro/Starlight website implementation. The entry page was revised into a neutral research specification following the project owner's feedback. The Rust kernel and harness remain unimplemented.
+The bounded Rust temporal experiment and deterministic test strategy are implemented. The knowledge base separates the research requirements from the versioned temporal contract. [Testing](testing.md) owns repeatable procedures; [Journal](journal.md#2026-09-17-integrated-deterministic-testing-and-knowledge-refactor) records observed checks and their limits.
 
 ## Work position
 
-The session closed on 2026-09-05 at the project owner's request. Type checking and the content transformation tests passed. The local development route returned HTTP 200.
+The contract, finite-model, fixed-reference and actual process tests pass locally on Linux through WSL. The bounded mutation audit detected every compilable generated mutation in its configured scope. Native Windows and hosted workflow runs remain unobserved. Historical adequacy and scholarly acceptance remain open.
 
-The production build generated HTML but failed while starting Pagefind. The final local error was `spawn EFTYPE`, following an earlier `spawn EBUSY` during dependency installation. The output is incomplete and must not be published.
+The documentation website passes its type/content checks, production build including search and sitemap, and built-link validation after correcting the 404 page's canonical URL. The former Pagefind installation failure was not reproduced in this checkout. Astro still reports overlapping generated 404 routes while producing the expected 404.html. Visual and keyboard review have not been repeated. No website publication is part of this work.
 
-The built-link check reports the missing sitemap from that incomplete build and a 404 canonical destination mismatch. Visual review of the revised specification layout and keyboard review remain pending.
+## Open work
 
-GitHub Pages has not been configured or published. The workflow checks pushes and pull requests. Publication requires a manual run after the build and review criteria are satisfied.
+- Review the [temporal contract](temporal-specification.md) for scholarly adequacy within its stated synthetic scope. Select an addressable historical source and reuse conditions before expanding it to a historical demonstrator.
+- Expand the [corpus inventory](../research-artefacts/corpus.csv), complete the relevant primary reading and ground dissertation-derived requirements in chapter-level evidence.
+- Review the website layout, navigation, search and keyboard use on narrow and wide screens. Publication follows the website acceptance criteria and the owner's authorization.
 
-## Next work
+## Research boundaries
 
-1. Restore and verify the local Pagefind installation using the committed package manifest and lockfile. Complete the production build, resolve the 404 canonical destination and rerun built-link checks.
-2. Review the neutral specification layout on narrow and wide screens, including navigation, search and keyboard use. Configure GitHub Pages and publish through the manual workflow after verification.
-3. Expand the [corpus inventory](../research-artefacts/corpus.csv) and complete the relevant primary reading. Ground dissertation-derived requirements in chapter-level evidence.
-4. Implement the proposed [minimum prototype](specification.md#minimum-prototype) with an explicitly selected Rust toolchain and the specified acceptance cases.
-
-## Research dependencies
-
-Adoption of a domain baseline depends on systematic reconstruction of the relevant primary corpus. Small semantic experiments can accompany that reading as bounded hypotheses. Browser execution follows a tested Rust operation. Harness integration follows an explicit tool contract.
-
-The general object model, uncertainty semantics, storage architecture and harness runtime remain open. A historical demonstrator needs an identified source and reuse conditions.
-
-## Continuity
-
-[Testing](testing.md) owns commands and their limits. [Journal](journal.md) records the website implementation and the owner's design correction. The handoff inbox is reserved for incoming material still awaiting integration. The continuation work above is already integrated.
+The general object model, broader uncertainty semantics, database persistence architecture and harness runtime remain open. A domain baseline requires systematic source reconstruction. Browser execution must agree with the tested Rust operation; harness integration requires an explicit tool contract. Transactions, revisions and recovery need their own executable cases when implemented.

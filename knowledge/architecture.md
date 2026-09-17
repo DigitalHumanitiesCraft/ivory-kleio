@@ -13,19 +13,20 @@ template:
 status: draft
 language: en
 created: 2026-09-05
-updated: 2026-09-05
-related: [specification, research-methodology, testing]
+updated: 2026-09-17
+related: [specification, temporal-specification, research-methodology, testing]
 ---
 
 # Architecture
 
-The historical kernel, persistence model and agent harness remain proposed components. The documentation website is implemented with Astro and Starlight. Rust is selected for the semantic core.
+The Rust reference model implements the bounded temporal experiment. The general historical kernel, database persistence model and agent harness remain proposed components. The documentation website is implemented with Astro and Starlight.
 
 ## Components
 
 | Component | Responsibility | State |
 |---|---|---|
-| Reference model and kernel | Historical values, explicit contexts, operations and derivations | Proposed |
+| Temporal reference model | Synthetic year interpretations, validated possibility queries and JSON snapshots | Implemented |
+| General historical kernel | Historical values, explicit contexts, operations and derivations | Proposed |
 | Persistence and query execution | Durable collections, revisions and query evaluation | Proposed |
 | Agent harness | Context selection, typed tool calls, workflow state and recorded feedback | Proposed |
 | LLM | Candidate interpretations, query plans and explanations | Proposed integration |
@@ -44,7 +45,13 @@ The relationships between token, interpretation, assertion and entity remain res
 
 ## Reference model and persistence
 
-The [minimum prototype](specification.md#minimum-prototype) proposes a Rust library with a callable example, tagged temporal values and JSON snapshots. Snapshot round trips test bounded semantic preservation. Transactions, recovery, indexing and general query execution require later engine mechanisms.
+The [temporal contract](temporal-specification.md) is implemented as one Rust library and a command-line binary. Tagged temporal values retain their declared form. The only runtime dependencies are Serde and serde_json. A pinned toolchain and dependency lockfile define the build inputs. Tempfile is a development dependency for isolated process tests.
+
+`src/lib.rs` owns raw input types, semantic validation, snapshot encoding and `could_occur_in_year`. The temporal specification owns their meanings and supported validation boundaries. `src/bin/ivory-temporal.rs` handles arguments, file I/O and the JSON report, including reopening and comparing the saved data. Keeping this as a Cargo binary lets integration tests invoke the built program directly without recursively invoking Cargo.
+
+Tests use independent expected data, bitmasks or materialized sets and actual child processes. Test oracles and filesystem concerns remain outside the semantic library. [Testing](testing.md) defines the procedures and [the mutation configuration](../.cargo/mutants.toml) scopes the separately installed audit tool.
+
+Snapshot round trips test bounded semantic preservation. Transactions, recovery, indexing and general query execution require later engine mechanisms.
 
 Existing storage components can carry the semantic kernel if they satisfy its requirements. Optimised queries must agree with a simple reference evaluation. Uncertain conditions may require a dedicated evaluator with rules distinct from ordinary host-language Boolean branching.
 
@@ -70,12 +77,19 @@ Shared Astro components and a custom stylesheet implement the specification layo
 |---|---|
 | `knowledge/` | Maintained project knowledge |
 | `research-artefacts/` | Corpus, proposal, reading notes and acceptance cases |
+| `src/` | Rust temporal reference model |
+| `src/bin/ivory-temporal.rs` | File-based save, reopen and query program |
+| `tests/` | Contract, finite-model, fixed-reference and actual process checks |
+| `tests/fixtures/` | Frozen inputs and independently authored expected results |
+| `Cargo.toml`, `Cargo.lock`, `rust-toolchain.toml` | Package, resolved dependencies and compiler version |
+| `.github/workflows/rust.yml` | Linux and Windows checks for the temporal experiment |
+| `.cargo/mutants.toml`, `.github/workflows/mutations.yml` | Bounded mutation audit configuration and manual workflow |
 | `site/src/` | Authored pages, components and styles |
 | `site/scripts/` | Source synchronisation, content checks and built-link validation |
 | `site/dist/` | Ignored static output |
 | `.github/workflows/pages.yml` | Verification and manual publication workflow |
 
-Rust packages will be added with the first executable experiment. A future WebAssembly adapter will reuse the same core operation in the browser.
+A future WebAssembly adapter will reuse the same core operation in the browser.
 
 ## Build and deployment
 

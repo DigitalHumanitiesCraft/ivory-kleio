@@ -13,7 +13,7 @@ template:
 status: draft
 language: en
 created: 2026-09-05
-updated: 2026-09-05
+updated: 2026-09-17
 knowledge-sources:
   methods:
     historical-computing: https://doi.org/10.12759/hsr.suppl.29.2017.193-202
@@ -60,7 +60,7 @@ The harness contribution concerns whether model-mediated work helps researchers 
 
 A database is a stored collection. A database management system provides the procedures for storing, changing and querying collections. A research tool supports activities such as source inspection or hypothesis comparison. Ivory KLEIO is the project and intended environment encompassing the kernel and its scholarly tools.
 
-The first executable target is a small Rust reference model. A persistent embedded kernel and agent-mediated research workflow follow from demonstrated behavior. The [public website](website-specification.md) explains and teaches the project. Its browser demonstration is a learning interface to a bounded operation.
+The first executable experiment is a small Rust reference model for synthetic temporal interpretations. Its [contract](temporal-specification.md) and [verification procedures](testing.md#reference-model-acceptance) define the bounded evidence. A persistent embedded kernel and agent-mediated research workflow follow from demonstrated behavior. The [public website](website-specification.md) explains and teaches the project. Its planned browser demonstration is a learning interface to a bounded operation.
 
 A general query language, distributed synchronisation, server deployment and dedicated physical storage each need a separate use case. A full scholarly editing platform is outside the initial scope.
 

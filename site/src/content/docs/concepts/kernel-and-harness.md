@@ -31,4 +31,4 @@ A model's confidence in its extraction does not quantify the historical distribu
 
 A library or command-line tool can call the same kernel without an LLM. This boundary makes it possible to evaluate the core separately and compare agent-mediated workflows against direct use.
 
-The harness and kernel are not yet implemented. The [architecture](../../generated/architecture/) records the current technical direction. The [agent interpretation case](../../generated/agent-case/) defines the proposed evidence for a later workflow.
+The Rust reference model implements one synthetic temporal query with source attribution and JSON snapshots. The general kernel and harness remain proposed components. The [architecture](../../generated/architecture/) records the current technical direction. The [agent interpretation case](../../generated/agent-case/) defines the proposed evidence for a later workflow.

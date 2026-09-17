@@ -8,7 +8,7 @@ Ivory KLEIO investigates how source evidence, historical context and uncertainty
 
 ## Current status
 
-This repository contains the research foundation and the source of its documentation website, a preliminary source inventory, reading notes and synthetic acceptance cases. Rust is selected for the core. The kernel and agent harness remain unimplemented. Website publication is pending the build and review work recorded in the [plan](knowledge/plan.md).
+This repository contains a runnable Rust experiment for synthetic temporal interpretations, the research foundation and the source of its documentation website. The experiment preserves source wording and distinguishes exclusive year alternatives from inclusive intervals. The general database engine and agent harness remain unimplemented. Website publication is pending the build and review work recorded in the [plan](knowledge/plan.md).
 
 Start with the [scientific one-pager](research-artefacts/ivory-kleio-proposal.md) for the argument, the [knowledge index](knowledge/INDEX.md) for maintained documentation, or the [work plan](knowledge/plan.md) for next work.
 
@@ -50,7 +50,17 @@ The [architecture](knowledge/architecture.md) describes these boundaries. The ge
 
 ## First prototype and website
 
-The proposed [minimum prototype](knowledge/specification.md#minimum-prototype) is a Rust reference model for the temporal example. It retains source wording and interpretation, answers one year-membership query with a structured explanation, and preserves the result through JSON save and reload.
+The [minimum prototype](knowledge/temporal-specification.md) is a Rust reference model for the temporal example. It retains source wording and interpretation, answers one year-membership query with a structured explanation, and preserves the result through JSON save and reload.
+
+From a checkout with rustup installed, run:
+
+```sh
+cargo run --locked --bin ivory-temporal -- research-artefacts/cases/temporal-alternatives.json 1705 target/temporal-roundtrip.json
+```
+
+The repository selects Rust 1.98.1. The program loads the synthetic records, queries 1705, saves them to a new file and repeats the query after reopening it. Its JSON report contains `round_trip_verified: true`, with `possible: false` for record A and `possible: true` for record B. Each result includes the source, temporal interpretation and applied rule. The output path must not already exist; choose a new filename when repeating the example.
+
+Run `cargo test --locked --all-targets` for repeatable contract, finite-model, reference-file and actual process tests. The process tests create their own temporary directories. [Testing](knowledge/testing.md) owns the deterministic strategy, offline commands and bounded mutation audit. [The knowledge index](knowledge/INDEX.md#core-knowledge) identifies the six core documents and their distinct responsibilities.
 
 This is the first semantic experiment. A database engine requires further persistence, query and revision behavior.
 
@@ -62,6 +72,9 @@ The website presents the project as a research specification, with precise state
 |---|---|
 | [knowledge/](knowledge/INDEX.md) | Maintained purpose, requirements, architecture, website brief, design, method and work continuity |
 | [research-artefacts/](research-artefacts/) | Scientific proposal, source inventory, reading notes and acceptance cases |
+| [src/](src/) | Rust temporal types, validation and possibility query |
+| [src/bin/ivory-temporal.rs](src/bin/ivory-temporal.rs) | Executable save, reopen and query program |
+| [tests/](tests/) | Deterministic contract, model-space, reference-file and process tests |
 | [source-material/](source-material/README.md) | Acquisition and reuse conventions for research inputs |
 | [site/](site/) | Astro website, generated-source integration and verification scripts |
 | [AGENTS.md](AGENTS.md) | Shared working instructions for coding agents |

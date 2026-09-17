@@ -7,7 +7,7 @@ Ivory KLEIO is a research project for an agentic scholarly environment built aro
 
 ## Implementation status
 
-This website presents the research foundation, proposed requirements and synthetic acceptance cases. The Rust kernel and agent harness are not yet implemented. There is currently no database package to install.
+This website presents the research foundation, requirement candidates and synthetic acceptance cases. A bounded Rust reference model implements the temporal case and can be run from a checkout using the [example command](../generated/testing/#reference-model-acceptance). The general database engine and agent harness remain unimplemented.
 
 The [temporal alternatives](../concepts/temporal-alternatives/) page explains one consequence of the recorded interpretation using synthetic inputs and expected results.
 
@@ -19,7 +19,7 @@ The [kernel and harness](../concepts/kernel-and-harness/) have different respons
 
 ## Research documents
 
-The [scientific proposal](../generated/proposal/) sets out the research objectives. The [specification](../generated/specification/) records requirement candidates and the proposed minimum experiment. The [source inventory](../generated/sources/) distinguishes identified works, partial reading and full analysis.
+The [scientific proposal](../generated/proposal/) sets out the research objectives. The [specification](../generated/specification/) records requirement candidates and the bounded temporal experiment. The [source inventory](../generated/sources/) distinguishes identified works, partial reading and full analysis.
 
 The historical information model remains open. Small experiments can accompany primary reading, while adoption of a domain baseline requires systematic reconstruction of the relevant corpus.
 

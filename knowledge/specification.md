@@ -13,8 +13,8 @@ template:
 status: draft
 language: en
 created: 2026-09-05
-updated: 2026-09-05
-related: [project, research-methodology, architecture, testing]
+updated: 2026-09-17
+related: [project, temporal-specification, research-methodology, architecture, testing]
 ---
 
 # Specification
@@ -59,65 +59,22 @@ A researcher asks an agent to propose an interpretation, inspects its evidence a
 
 ## Minimum prototype
 
-This is a proposed experimental contract, not an adopted general historical date model. It isolates one distinction with a Rust library, a callable example or small CLI, and a JSON save/load path.
-
-### Scope and inputs
-
-Each record describes one synthetic event and retains a record identifier, source identifier, source locator, original wording and interpretation identifier. The source record explicitly declares its synthetic origin.
-
-The temporal interpretation has exactly one tagged form.
-
-| Form | Meaning | Valid input |
-|---|---|---|
-| Exclusive alternatives | Exactly one of the exhaustively listed years applies | A nonempty list of distinct year labels |
-| Inclusive interval | Any year from the lower through the upper bound is possible | Two year labels with lower bound at most upper bound |
-
-For this experiment, a year label is an integer from 1 through 9999 in one declared synthetic year domain. The scope includes no historical calendar conversion, partial dates, open bounds, probability distributions or unknown values. Unsupported forms require an explicit error.
-
-Records identify that domain. JSON snapshots declare their format version. The operation result declares the rule version used. Exact field names and version identifiers will be recorded with the implementation before persistence is relied upon.
-
-### Operation and result
-
-`could_occur_in_year(record, year)` asks whether the query year is permitted by the recorded interpretation. For alternatives it tests membership. For an interval it tests inclusive bounds. Its Boolean result expresses possibility within this restricted, exhaustive model.
-
-The structured result includes the Boolean answer, query year, record and interpretation references, domain, rule version and applied rule. It must expose the alternatives or bounds that justify the answer. Explanations follow from those fields and need no model call.
-
-Invalid years, empty or repeated alternatives, reversed bounds, unsupported variants and unknown snapshot versions produce declared errors. They must not be repaired silently or converted into a false answer.
-
-### Acceptance
-
-The [case result table](../research-artefacts/cases/temporal-alternatives.md#expected-behavior) is the semantic oracle. For alternatives 1700 or 1710, the answer for 1705 is false. For the inclusive interval 1700 through 1710, it is true.
-
-A complete experiment must also demonstrate the following behavior.
-
-1. Both forms permit 1700 and 1710 and exclude 1699 and 1711.
-2. A single alternative and a one-year interval permit that year and no other year.
-3. Each result exposes the interpretation and applied rule.
-4. JSON save and reload preserve identifiers, source wording, domain, temporal variant and answers for the same inputs and rule version.
-5. Malformed or unsupported inputs return the specified errors.
-6. A documented command runs the example from a fresh checkout with the declared toolchain.
-
-This provides bounded evidence for H01, H02, H05 and H08. Snapshot round trips do not establish database transactions, revision history or crash recovery. The experiment does not implement the later agent case.
+The implemented temporal experiment addresses H01, H02, one possibility predicate under H05 and a JSON round trip under H08. Its versioned [temporal specification](temporal-specification.md) owns all input forms, operation semantics, result fields, errors and acceptance criteria. The [synthetic case](../research-artefacts/cases/temporal-alternatives.md) supplies independently stated examples. General historical validity and adoption of a domain baseline remain open.
 
 ## Website and later integration
 
 [Website specification](website-specification.md) owns public learning paths and publication criteria. A later browser demonstration should call this same operation through WebAssembly. A harness subsequently invokes tested operations through a typed interface.
 
-## Decisions
+## Decisions and ownership
 
-| Subject | Position | Status |
-|---|---|---|
-| Name and repository | Ivory KLEIO, public DigitalHumanitiesCraft/ivory-kleio | Established |
-| Repository and website language | English | Established |
-| Method | Promptotyping with maintained knowledge and source analysis | Established |
-| Core language | Rust | Established |
-| Licensing | Original text CC BY 4.0, code MIT | Established |
-| Domain baseline | Requires systematic reconstruction of the relevant primary corpus | Established research constraint |
-| Current implementation | Website source, documentation, source inventory and synthetic cases | Observed |
-| First executable target | Temporal alternatives, one operation and JSON round trip | Proposed experiment |
-| Research interface | Agent harness over independently callable kernel operations | Proposed direction |
-| Website format | Neutral research specification with factual, precise text | Established by project owner |
-| Site framework | Astro with Starlight, npm and Node.js 24 | Implemented source |
-| Website publication | Build completion and review remain pending | Open |
-| Browser operation adapter | Rust WebAssembly | Proposed technical choice |
-| General object model, storage and harness runtime | Determine from requirements and experiments | Open |
+Requirement candidates become a domain baseline through the source-analysis and review procedure in [Research methodology](research-methodology.md). Implementation evidence alone does not adopt a general historical model. The bounded temporal experiment is authorized as an executable research hypothesis.
+
+| Subject | Owning document |
+|---|---|
+| Purpose, name, intended environment and licensing | [Project](project.md) |
+| Experimental temporal behavior and version policy | [Temporal specification](temporal-specification.md) |
+| Rust implementation, storage boundaries, website stack and proposed adapters | [Architecture](architecture.md) |
+| Website purpose and publication criteria | [Website specification](website-specification.md) |
+| Visual and interaction requirements | [Design](design.md) |
+| Test procedures and evidence limits | [Testing](testing.md) |
+| Current work position and open work | [Plan](plan.md) |

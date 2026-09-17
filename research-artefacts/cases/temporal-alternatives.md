@@ -1,6 +1,6 @@
 # Temporal alternatives
 
-Synthetic case `CASE-TIME-001`, proposed for H01, H02, H05 and bounded snapshot evidence for H08. All records and years are invented. The [minimum prototype](../../knowledge/specification.md#minimum-prototype) owns the experimental contract.
+Synthetic case `CASE-TIME-001` supplies the acceptance oracle for H01, H02, one possibility predicate under H05 and bounded snapshot evidence for H08. All records and years are invented. The [minimum prototype](../../knowledge/temporal-specification.md) owns the experimental contract. The [JSON fixture](temporal-alternatives.json) records these inputs, and the [contract tests](../../tests/temporal_contract.rs) check the implementation against them.
 
 ## Inputs and interpretation
 

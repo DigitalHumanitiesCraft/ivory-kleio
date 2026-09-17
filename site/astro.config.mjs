@@ -23,7 +23,8 @@ export default defineConfig({
           { label: 'The kernel and the harness', slug: 'concepts/kernel-and-harness' },
         ] },
         { label: 'Specification', items: [
-          { label: 'Data and operations', slug: 'generated/specification' },
+          { label: 'Requirements', slug: 'generated/specification' },
+          { label: 'Temporal contract', slug: 'generated/temporal-specification' },
           { label: 'Architecture', slug: 'generated/architecture' },
           { label: 'Acceptance case', slug: 'generated/temporal-case' },
         ] },
@@ -34,6 +35,7 @@ export default defineConfig({
           { label: 'Sources and reading', slug: 'generated/sources' },
         ] },
         { label: 'Development', items: [
+          { label: 'Testing and evaluation', slug: 'generated/testing' },
           { label: 'Contributing', slug: 'generated/contributing' },
           { label: 'Build this website', slug: 'contributing/website' },
         ] },

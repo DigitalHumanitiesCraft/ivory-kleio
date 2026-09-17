@@ -1,0 +1,40 @@
+{
+  "format_version": 1,
+  "records": [
+    {
+      "record_id": " boundary alternatives ",
+      "domain": "synthetic-years-v1",
+      "source": {
+        "source_id": " shared α ",
+        "locator": " Blatt α\nZeile 2 ",
+        "wording": "  ‘9999 oder 1 oder 1700’\r\n第二行\t  ",
+        "origin": "synthetic"
+      },
+      "interpretation": {
+        "interpretation_id": " unsorted alternatives ",
+        "temporal": {
+          "kind": "exclusive_alternatives",
+          "years": [9999, 1, 1700]
+        }
+      }
+    },
+    {
+      "record_id": "singleton interval",
+      "domain": "synthetic-years-v1",
+      "source": {
+        "source_id": " shared α ",
+        "locator": "Blatt β",
+        "wording": "im synthetischen Jahr 1",
+        "origin": "synthetic"
+      },
+      "interpretation": {
+        "interpretation_id": "singleton bounds",
+        "temporal": {
+          "kind": "inclusive_interval",
+          "lower": 1,
+          "upper": 1
+        }
+      }
+    }
+  ]
+}

@@ -5,6 +5,8 @@ import { renderDocument, rewriteTarget } from './content.mjs';
 test('canonical cross-references remain within the published specification', () => {
   assert.equal(rewriteTarget('specification.md#minimum-prototype', 'knowledge/project.md'),
     '/ivory-kleio/generated/specification/#minimum-prototype');
+  assert.equal(rewriteTarget('temporal-specification.md#data-contract-v1', 'knowledge/architecture.md'),
+    '/ivory-kleio/generated/temporal-specification/#data-contract-v1');
   assert.equal(rewriteTarget('../research-artefacts/corpus.csv', 'knowledge/project.md'),
     '/ivory-kleio/generated/sources/');
   assert.equal(rewriteTarget('#terms', 'knowledge/INDEX.md'), '#terms');

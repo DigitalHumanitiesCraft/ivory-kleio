@@ -1,0 +1,45 @@
+{
+  "query_year": 1705,
+  "round_trip_verified": true,
+  "results": [
+    {
+      "possible": false,
+      "query_year": 1705,
+      "record_id": "CASE-TIME-001-A",
+      "interpretation_id": "CASE-TIME-001-A-alternatives",
+      "domain": "synthetic-years-v1",
+      "rule_version": "could-occur-in-year-v1",
+      "applied_rule": "alternative_membership",
+      "temporal": {
+        "kind": "exclusive_alternatives",
+        "years": [1700, 1710]
+      },
+      "source": {
+        "source_id": "CASE-TIME-001",
+        "locator": "record A",
+        "wording": "in 1700 or 1710",
+        "origin": "synthetic"
+      }
+    },
+    {
+      "possible": true,
+      "query_year": 1705,
+      "record_id": "CASE-TIME-001-B",
+      "interpretation_id": "CASE-TIME-001-B-interval",
+      "domain": "synthetic-years-v1",
+      "rule_version": "could-occur-in-year-v1",
+      "applied_rule": "inclusive_bounds",
+      "temporal": {
+        "kind": "inclusive_interval",
+        "lower": 1700,
+        "upper": 1710
+      },
+      "source": {
+        "source_id": "CASE-TIME-001",
+        "locator": "record B",
+        "wording": "between 1700 and 1710, inclusive",
+        "origin": "synthetic"
+      }
+    }
+  ]
+}

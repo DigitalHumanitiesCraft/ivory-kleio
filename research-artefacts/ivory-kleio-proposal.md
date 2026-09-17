@@ -17,7 +17,7 @@ The research has six objectives.
 5. Investigate an agentic environment in which a harness mediates context and tools while an LLM proposes interpretations and query plans. Generated proposals, formal validation and scholarly adoption remain distinguishable.
 6. Evaluate semantic preservation, auditability, modelling effort, performance and scholarly usability against carefully implemented alternatives.
 
-Implementation begins with a bounded Rust reference model. The proposed first experiment distinguishes an event occurring in either 1700 or 1710 from one occurring anywhere in that inclusive interval. A query about 1705 yields different answers. Source wording, interpretation and a structured explanation must survive JSON save and reload. This tests one semantic distinction before a general database engine is designed.
+The first implemented experiment is a bounded Rust reference model. It distinguishes an event occurring in either 1700 or 1710 from one occurring anywhere in that inclusive interval. A query about 1705 yields different answers. The executable example checks that source wording, interpretation and a structured explanation survive JSON save and reload. This tests one semantic distinction before a general database engine is designed.
 
 A persistent embedded kernel follows from demonstrated semantics. Its object model, physical storage and harness runtime remain research questions. The kernel stays callable without an LLM. Model confidence does not determine historical certainty, and a retained invocation records an actual proposal rather than guaranteeing its regeneration.
 

@@ -13,12 +13,12 @@ template:
 status: draft
 language: en
 created: 2026-09-05
-updated: 2026-09-05
+updated: 2026-09-17
 knowledge-sources:
   methods:
     ivory-blog: https://ivorytower.hypotheses.org/
     historical-computing: https://doi.org/10.12759/hsr.suppl.29.2017.193-202
-related: [project, specification, testing]
+related: [project, specification, temporal-specification, testing]
 ---
 
 # Research methodology
@@ -37,7 +37,9 @@ Distinguish intervals, exclusive alternatives, missingness, linguistic vagueness
 
 Investigate event time, validity time, source recording time, research decision time and system time as potentially different dimensions. Establish which dimensions a case needs and how they relate. These distinctions are inherited project questions, not a fully reconstructed taxonomy attributed to the primary corpus.
 
-For each operation, define what its inputs mean, which context it needs, its result vocabulary and how it composes with later operations. Preserve counterexamples involving dependent hypotheses or mutual exclusion. Independence, distributivity and ordinary equality semantics must be justified for the chosen model.
+For each operation, define what its inputs mean, which context it needs, its result vocabulary and how it composes with later operations. Preserve counterexamples involving dependent hypotheses or mutual exclusion. Independence, distributivity and ordinary equality semantics must be justified for the chosen model. A deterministic evaluator can retain uncertainty in its output; reproducible computation supplies no additional certainty about the historical event.
+
+Before implementation, state expected cases and relevant equivalence relations independently of the evaluator. Finite model comparison can test an experimental formalization against a different representation. Its conclusion remains bounded by the generated models and declared assumptions. [Temporal specification](temporal-specification.md) owns the current experiment, and [Testing](testing.md) owns how its claims are checked. Fixed test expectations change only after the underlying interpretation or contract has been reviewed and the reason recorded.
 
 ## Evidence and requirement mapping
 

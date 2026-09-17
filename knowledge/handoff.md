@@ -13,15 +13,9 @@ template:
 status: active
 language: en
 created: 2026-09-05
-updated: 2026-09-05
+updated: 2026-09-17
 ---
 
 # Handoff
 
-Inspect the source and target of each incoming delta. Integrate accepted material into its owning document, record the result in [Journal](journal.md), and remove the processed item.
-
-## Open handoff items
-
 No open handoff items.
-
-The website feedback and session-close request have been integrated. Resume through [Plan](plan.md), which records the incomplete production build and publication work.
