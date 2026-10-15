@@ -13,7 +13,7 @@ template:
 status: draft
 language: en
 created: 2026-09-05
-updated: 2026-09-17
+updated: 2026-10-15
 knowledge-sources:
   methods:
     ivory-blog: https://ivorytower.hypotheses.org/
@@ -23,13 +23,13 @@ related: [project, specification, temporal-specification, testing]
 
 # Research methodology
 
-Primary-text analysis establishes the domain requirements. The project distinguishes a historical problem, an author's proposed solution and its own formal interpretation. Selected passages inform the [specification](specification.md), while complete reconstruction remains research work.
+The dissertation establishes the existing conceptual foundation. The [requirements integration](requirements-integration.md) records its passage-level correspondence to both requirement registers and preserves requirements with no direct operational counterpart. Source-specific primary-text analysis establishes further domain requirements. The project distinguishes a historical problem, an author's proposed solution and its own formal interpretation. Selected passages inform the [specification](specification.md), while complete reconstruction remains research work.
 
 ## Rationale
 
 Bibliographically inventory the Ivory blog and related works, then read all contributions relevant to historical information representation, processing and implementation in full. Record inclusion and exclusion reasons as the corpus expands. Follow references to earlier source-oriented processing, Kleio manuals and surviving implementations.
 
-Compare the development of concepts across publications. Existing summaries help locate evidence. Attributed requirements require inspection of the primary text. A broad domain baseline depends on complete analysis of the relevant corpus. Small executable experiments can accompany reading as explicitly bounded hypotheses.
+Compare the development of concepts across publications. Existing summaries help locate evidence. Attributed requirements require inspection of the primary text. Each attributed claim requires the relevant source analysis. A proposed general baseline needs evidence for its actual scope; the existing dissertation-backed cases can be developed while other source reconstructions remain open. Small executable experiments can accompany reading as explicitly bounded hypotheses.
 
 ## Phenomena and their treatment
 
@@ -65,11 +65,11 @@ Distinguish the original publication from later access copies. A local acquisiti
 
 The basic information unit, compatibility of uncertainty calculi, dependencies between interpretations and meaning of conditional execution remain open. Neither a factoid model nor a graph representation determines the answer in advance.
 
-The 2020 record needs completion. The 2018 contribution, graph presentation and Kleio documentation need direct primary analysis. The dissertation's role needs chapter-level evidence beyond its accessible abstract and earlier excerpts. This documentation revision adds no primary reading.
+The 2020 record needs completion. The 2018 contribution, graph presentation and Kleio documentation need direct primary analysis. The dissertation has been read through its substantive chapters for the common requirement mapping. Remaining historical fixture work concerns exact source acquisition and declared operations, rather than repeating the conceptual foundation. The dissertation reading and its integration are recorded in the source inventory; other corpus reading states remain unchanged.
 
 ## Comparative evaluation
 
-Select a historical financial source with an addressable location scheme and recorded reuse conditions. Include contrasting source forms when testing generality.
+Start with a documented dissertation example and establish its exact historical source location and reuse conditions before adopting it as a fixture. Include contrasting source forms when testing generality.
 
 Compare relational, RDF or property-graph implementations using equivalent information, contexts and operations. Select concrete systems after the requirements are precise enough to make the comparison informative. Assess semantic preservation and modelling effort as well as performance.
 

@@ -24,4 +24,4 @@ The University of Trier lists the 1993 system description and tutorial. The tuto
 
 ## Dissertation
 
-For `pollin-2025`, the public abstract and existing excerpts supplied the initial application context. A complete chapter-level reading is required to derive detailed requirements. The repository stores no dissertation file or private excerpts.
+For `pollin-2025`, the public abstract and existing excerpts supplied the initial application context in September. The [October dissertation reading](dissertation-requirements.md) now records chapter-level analysis and its integration. The repository stores no dissertation PDF or private excerpts.

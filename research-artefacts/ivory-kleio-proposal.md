@@ -6,7 +6,7 @@ An agentic research environment with a database kernel for historical informatio
 
 Historical dates may admit competing readings, monetary values depend on regional conventions, and scholarly interpretations change with new evidence. Ivory KLEIO asks how a computational system can preserve these conditions through representation, queries and revision. Its working hypothesis is that a shared semantic core can retain historical meaning across processing chains.
 
-The project connects the Ivory programme with source-oriented processing in Kleio. Initial references include *The Need for a Theory of Historical Computing* (Thaller 1991) and *On vagueness and uncertainty in historical data* (Thaller 2020). The dissertation on historical financial information (Pollin 2025) supplies an application context. The [corpus inventory](corpus.csv) records the incomplete primary analysis. Systematic reconstruction of the relevant corpus precedes adoption of a domain baseline.
+The project connects the Ivory programme with source-oriented processing in Kleio. Initial references include *The Need for a Theory of Historical Computing* (Thaller 1991) and *On vagueness and uncertainty in historical data* (Thaller 2020). The dissertation on historical financial information (Pollin 2025) supplies the conceptual foundation and existing source-driven examples. The [requirements integration](../knowledge/requirements-integration.md) connects these with the theoretical R register and H operation candidates. The [corpus inventory](corpus.csv) records the incomplete primary analysis. Systematic reconstruction of the relevant corpus precedes adoption of a domain baseline.
 
 The research has six objectives.
 

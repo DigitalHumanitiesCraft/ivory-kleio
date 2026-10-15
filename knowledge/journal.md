@@ -13,7 +13,7 @@ template:
 status: active
 language: en
 created: 2026-09-05
-updated: 2026-09-17
+updated: 2026-10-15
 related: [project, specification, plan, handoff]
 ---
 
@@ -22,6 +22,14 @@ related: [project, specification, plan, handoff]
 Entries record substantive transitions and the evidence behind them. Future work is maintained in [Plan](plan.md), and incoming deltas are processed through [Handoff](handoff.md).
 
 ## Entries
+
+### 2026-10-15 integrated dissertation and requirement consolidation
+
+The owner commissioned consolidation of the existing dissertation, hist-info-model and Ivory KLEIO. Chapters 1–7 of the published 2025 dissertation were read against the two requirement registers. The [source record](../research-artefacts/reading-notes/dissertation-requirements.md) identifies the consulted PDF. [Requirements integration](requirements-integration.md) now owns the complete R/H correspondence, passage locators, existing examples, evidence boundaries and specific open questions. The dissertation supplies the foundation; the primitive reconstruction and comparative gap claims retain hypothesis status.
+
+The theoretical repository's current knowledge, navigation and manuscript outline were brought into agreement. The local knowledge model and operational contract retain distinct responsibilities. The source inventory now records the relevant dissertation analysis, while the other primary-source reading states remain unchanged. Historical fixture adoption and scholarly acceptance remain open. The Rust implementation and temporal contract were inspected for the mapping; their semantics were not changed.
+
+Independent review checked source claims, identifier coverage, preservation of theory examples and the temporal implementation boundary. Integration repaired missing reverse correspondences and replaced an unverified DOI association with the published record/URN. Targeted checks cover every R/H identifier, both mapping directions, current knowledge links/anchors and code fences. The theoretical data validator, website content tests, Astro diagnostics, static build and built-link check pass. The pre-existing overlapping 404-route warning remains. No deployment or publication was performed.
 
 ### 2026-09-17 integrated deterministic testing and knowledge refactor
 

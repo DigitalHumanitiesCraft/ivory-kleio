@@ -13,9 +13,9 @@ template:
 status: draft
 language: en
 created: 2026-09-05
-updated: 2026-09-17
+updated: 2026-10-15
 version: "0.1"
-related: [project, research-methodology, specification, temporal-specification, architecture, testing, website-specification, design, plan, journal, handoff]
+related: [project, research-methodology, requirements-integration, specification, temporal-specification, architecture, testing, website-specification, design, plan, journal, handoff]
 ---
 
 # Index
@@ -28,6 +28,7 @@ Ivory KLEIO connects historical information modelling with an agentic research e
 |---|---|---|
 | [Project](project.md) | What are the scientific purpose and product boundaries? | Scope or contribution changes |
 | [Research methodology](research-methodology.md) | How are sources read and concepts formalized? | A research procedure or source criterion changes |
+| [Requirements integration](requirements-integration.md) | How do dissertation findings, R representation needs, H operations and existing examples connect? | A mapped requirement, source passage, example or evidence boundary changes |
 | [Specification](specification.md) | Which research requirements and adoption criteria apply? | A sourced requirement, product boundary or adoption decision changes |
 | [Temporal specification](temporal-specification.md) | What exactly do the implemented data, operation and versions mean? | A temporal field, rule, error, equivalence or acceptance criterion changes |
 | [Architecture](architecture.md) | How is the implementation organized and what remains proposed? | A component, dependency or technical choice changes |
@@ -57,7 +58,7 @@ The root [AGENTS.md](../AGENTS.md) provides the shared action layer. [CLAUDE.md]
 
 ## Reading paths
 
-Start a session with this index, then the handoff inbox. For orientation, continue with project and specification. For source work, use research methodology and the corpus inventory. For temporal implementation, read temporal specification, architecture and testing; consult the general specification for its requirement rationale. For website work, use website specification and design. Consult the journal for observed evidence or the reason for a transition, and plan for open work.
+Start a session with this index, then the handoff inbox. For orientation, continue with project, requirements integration and specification. For source work, use research methodology and the corpus inventory. For temporal implementation, read temporal specification, architecture and testing; consult the general specification for its requirement rationale. For website work, use website specification and design. Consult the journal for observed evidence or the reason for a transition, and plan for open work.
 
 ## Document boundaries
 

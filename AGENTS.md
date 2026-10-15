@@ -9,6 +9,7 @@ Use Promptotyping to develop the project from its maintained knowledge base. Rea
 | Task | Read |
 |---|---|
 | Purpose and scope | [Project](knowledge/project.md) |
+| Dissertation, R/H correspondence and existing examples | [Requirements integration](knowledge/requirements-integration.md) |
 | Research requirements and adoption criteria | [Specification](knowledge/specification.md) |
 | Temporal data, operations, versions and acceptance | [Temporal specification](knowledge/temporal-specification.md) |
 | Components and technical choices | [Architecture](knowledge/architecture.md) |

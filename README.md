@@ -8,7 +8,7 @@ Ivory KLEIO investigates how source evidence, historical context and uncertainty
 
 ## Current status
 
-This repository contains a runnable Rust experiment for synthetic temporal interpretations, the research foundation and the source of its documentation website. The experiment preserves source wording and distinguishes exclusive year alternatives from inclusive intervals. The general database engine and agent harness remain unimplemented. Website publication is pending the build and review work recorded in the [plan](knowledge/plan.md).
+This repository contains a runnable Rust experiment for synthetic temporal interpretations, the research foundation and the source of its documentation website. The experiment preserves source wording and distinguishes exclusive year alternatives from inclusive intervals. The general database engine and agent harness remain unimplemented. Website publication is pending the substantive, visual and keyboard review recorded in the [plan](knowledge/plan.md).
 
 Start with the [scientific one-pager](research-artefacts/ivory-kleio-proposal.md) for the argument, the [knowledge index](knowledge/INDEX.md) for maintained documentation, or the [work plan](knowledge/plan.md) for next work.
 
@@ -36,7 +36,7 @@ The research therefore concerns data structures and the semantics of operations,
 5. Investigate an agentic environment for inspecting proposals and revising scholarly decisions.
 6. Compare the approach with alternative implementations using equivalent information and rules.
 
-Historical financial sources provide the first intended application context through the [dissertation](https://unipub.uni-graz.at/obvugrhs/12127700) and the Bookkeeping Ontology. A concrete historical collection remains to be selected. The [source inventory](research-artefacts/corpus.csv) records incomplete reading states.
+The [dissertation](https://unipub.uni-graz.at/obvugrhs/12127700) supplies the conceptual foundation, the Bookkeeping Ontology and documented source-driven workflows. The [requirements integration](knowledge/requirements-integration.md) connects every R and H identifier to dissertation passages, existing examples and specific open questions. Existing examples are examined before adding source material. The [source inventory](research-artefacts/corpus.csv) records the differing reading states.
 
 ## Database and research environment
 

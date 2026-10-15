@@ -13,13 +13,13 @@ template:
 status: draft
 language: en
 created: 2026-09-05
-updated: 2026-09-17
+updated: 2026-10-15
 related: [project, temporal-specification, research-methodology, architecture, testing]
 ---
 
 # Specification
 
-The H01–H11 entries are requirement candidates. Each needs a precise source passage or an explicit project rationale, defined scope and observable acceptance behavior before adoption as a domain baseline. [Research methodology](research-methodology.md) governs that transition.
+The [requirements integration](requirements-integration.md) connects H01–H11 to the dissertation, the R representation requirements and existing examples. The H01–H11 entries remain requirement candidates. Each needs a precise source passage or an explicit project rationale, defined scope and observable acceptance behavior before adoption as a domain baseline. [Research methodology](research-methodology.md) governs that transition.
 
 ## Requirements
 

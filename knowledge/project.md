@@ -13,7 +13,7 @@ template:
 status: draft
 language: en
 created: 2026-09-05
-updated: 2026-09-17
+updated: 2026-10-15
 knowledge-sources:
   methods:
     historical-computing: https://doi.org/10.12759/hsr.suppl.29.2017.193-202
@@ -29,7 +29,7 @@ Ivory KLEIO investigates how source evidence, historical context and uncertainty
 
 ## Material basis
 
-The [dissertation on historical financial information](https://unipub.uni-graz.at/obvugrhs/12127700) and the Bookkeeping Ontology supply the first intended application context. A specific reusable historical collection remains to be selected. The current [cases](../research-artefacts/cases/) are synthetic.
+The [dissertation on historical financial information](https://unipub.uni-graz.at/obvugrhs/12127700) supplies the conceptual foundation, the Bookkeeping Ontology and documented source-driven workflows. The [requirements integration](requirements-integration.md) connects these with the theoretical work in hist-info-model and the H operation candidates. Existing dissertation examples are examined before extending the source material. Their reuse as historical fixtures requires precise source locations, checked readings and reuse conditions. The current executable [cases](../research-artefacts/cases/) are synthetic.
 
 The Ivory programme and source-oriented processing in Kleio provide the principal research starting points. The [corpus inventory](../research-artefacts/corpus.csv) records the consulted representations and their incomplete reading states. Systematic reconstruction of the relevant primary corpus precedes adoption of a domain baseline.
 
@@ -37,7 +37,7 @@ The Ivory programme and source-oriented processing in Kleio provide the principa
 
 The working hypothesis is that a shared semantic core can preserve the meaning of historical values across processing chains. Its contribution must be assessed against carefully implemented alternatives using equivalent information and rules.
 
-The research has six objectives.
+The existing objectives are developed through consolidation of the dissertation, the R representation register and the H operation register. The theoretical and executable strands remain parts of the same undertaking.
 
 1. Reconstruct the requirements of historical information from primary texts, with passage-level evidence, scope and counterexamples.
 2. Specify data types and relationships that distinguish source representations, interpretations and reconstructed entities.

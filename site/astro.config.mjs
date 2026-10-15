@@ -24,6 +24,7 @@ export default defineConfig({
         ] },
         { label: 'Specification', items: [
           { label: 'Requirements', slug: 'generated/specification' },
+          { label: 'Requirements integration', slug: 'generated/requirements-integration' },
           { label: 'Temporal contract', slug: 'generated/temporal-specification' },
           { label: 'Architecture', slug: 'generated/architecture' },
           { label: 'Acceptance case', slug: 'generated/temporal-case' },
