@@ -13,7 +13,7 @@ template:
 status: active
 language: en
 created: 2026-09-05
-updated: 2026-10-15
+updated: 2026-11-10
 related: [project, specification, plan, handoff]
 ---
 
@@ -22,6 +22,14 @@ related: [project, specification, plan, handoff]
 Entries record substantive transitions and the evidence behind them. Future work is maintained in [Plan](plan.md), and incoming deltas are processed through [Handoff](handoff.md).
 
 ## Entries
+
+### 2026-11-10 repository state review
+
+The owner commissioned a maintenance review of the active repositories. The working tree was clean and `codex/temporal-prototype` matched its remote branch. The Rust experiment and the dissertation integration exist only on that branch. The local and remote `main` remain at the September website commit, and `main` is an ancestor of the working branch.
+
+GitHub Pages currently builds `main` from the repository root with the legacy branch build rather than deploying the Astro output, whose workflow deploys only on manual dispatch. Requests to the public address returned the knowledge journal, the handoff inbox and `CLAUDE.md` as rendered pages. The Pages configuration was not changed. Its source and the selection of knowledge documents rendered by the Astro site await the owner's publication decision.
+
+Astro diagnostics, the three content tests, the production build and the built-link check passed on Windows. The Rust checks were not run because this machine provides no Rust toolchain, natively or through WSL. The README no longer states a fixed number of core documents, since the index lists requirements integration as an additional one.
 
 ### 2026-10-15 integrated dissertation and requirement consolidation
 

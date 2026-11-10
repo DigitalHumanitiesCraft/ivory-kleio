@@ -60,7 +60,7 @@ cargo run --locked --bin ivory-temporal -- research-artefacts/cases/temporal-alt
 
 The repository selects Rust 1.98.1. The program loads the synthetic records, queries 1705, saves them to a new file and repeats the query after reopening it. Its JSON report contains `round_trip_verified: true`, with `possible: false` for record A and `possible: true` for record B. Each result includes the source, temporal interpretation and applied rule. The output path must not already exist; choose a new filename when repeating the example.
 
-Run `cargo test --locked --all-targets` for repeatable contract, finite-model, reference-file and actual process tests. The process tests create their own temporary directories. [Testing](knowledge/testing.md) owns the deterministic strategy, offline commands and bounded mutation audit. [The knowledge index](knowledge/INDEX.md#core-knowledge) identifies the six core documents and their distinct responsibilities.
+Run `cargo test --locked --all-targets` for repeatable contract, finite-model, reference-file and actual process tests. The process tests create their own temporary directories. [Testing](knowledge/testing.md) owns the deterministic strategy, offline commands and bounded mutation audit. [The knowledge index](knowledge/INDEX.md#core-knowledge) identifies the core documents and their distinct responsibilities.
 
 This is the first semantic experiment. A database engine requires further persistence, query and revision behavior.
 
