@@ -10,6 +10,6 @@ Expected test values must be independently grounded. Preserve fixed compatibilit
 
 Website contributions follow the [website specification](knowledge/website-specification.md) and [design brief](knowledge/design.md). Use factual, neutral text and headings that identify their contents. Keep proposed and implemented behavior distinguishable. Tutorials need verified commands and expected output, while canonical requirements remain in the knowledge base.
 
-Record substantive integrated changes in [the journal](knowledge/journal.md). Keep accepted next work in [the plan](knowledge/plan.md). Use [the handoff inbox](knowledge/handoff.md) for incoming material awaiting integration.
+Record substantive integrated changes in [the journal](knowledge/journal.md). Keep accepted next work in [the plan](knowledge/plan.md). List incoming material awaiting integration in the Open section at the beginning of the journal.
 
 Original text contributions follow CC BY 4.0 and project code follows MIT. Record source-specific terms before adding third-party material.

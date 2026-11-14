@@ -13,15 +13,23 @@ template:
 status: active
 language: en
 created: 2026-09-05
-updated: 2026-11-10
-related: [project, specification, plan, handoff]
+updated: 2026-11-14
+related: [project, specification, plan]
 ---
 
 # Journal
 
-Entries record substantive transitions and the evidence behind them. Future work is maintained in [Plan](plan.md), and incoming deltas are processed through [Handoff](handoff.md).
+Entries record substantive transitions and the evidence behind them. Future work is maintained in [Plan](plan.md). The section below lists what is open for the next session, including incoming deltas awaiting integration.
+
+## Open
+
+- The GitHub Pages source and the selection of knowledge documents rendered by the Astro site await the owner's publication decision. The public address currently serves `main` through the legacy branch build and renders the journal and `CLAUDE.md` as pages (see the 2026-11-10 entry). The Pages configuration has not been changed.
 
 ## Entries
+
+### 2026-11-14 handoff inbox dissolved into the journal
+
+By the owner's decision of 2026-11-14, Promptotyping repositories no longer keep `knowledge/handoff.md`, and the journal opens with what is open. The handoff inbox held only its empty state, so no item was carried over. The open Pages publication decision recorded in the 2026-11-10 entry now stands under Open. The action layer, contributing guide, index, plan and website specification route to the journal instead of the inbox.
 
 ### 2026-11-10 repository state review
 

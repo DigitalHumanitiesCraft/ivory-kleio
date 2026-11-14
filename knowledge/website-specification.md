@@ -42,7 +42,7 @@ The maintained knowledge base owns research purpose, requirements and architectu
 
 Introductory pages are separately authored for their explanatory task. They must agree with the canonical documents. Generated pages are refreshed before development, checking and production builds.
 
-The public corpus preserves its recorded reading states. The handoff inbox and journal remain repository working documents rather than primary website navigation.
+The public corpus preserves its recorded reading states. The journal remains a repository working document rather than primary website navigation.
 
 ## Temporal example
 

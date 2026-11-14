@@ -15,7 +15,7 @@ language: en
 created: 2026-09-05
 updated: 2026-10-15
 version: "0.1"
-related: [project, research-methodology, requirements-integration, specification, temporal-specification, architecture, testing, website-specification, design, plan, journal, handoff]
+related: [project, research-methodology, requirements-integration, specification, temporal-specification, architecture, testing, website-specification, design, plan, journal]
 ---
 
 # Index
@@ -43,8 +43,7 @@ The general specification retains provisional research requirements. The tempora
 | [Website specification](website-specification.md) | What should visitors learn and which pages can be published? | A learning path or publication criterion changes |
 | [Design](design.md) | How should the website present research and interactions? | A visual or interaction choice gains evidence |
 | [Plan](plan.md) | What is the current work position and accepted next work? | Work or a dependency changes |
-| [Journal](journal.md) | Which substantive transitions occurred and why? | A change is integrated, corrected or rejected |
-| [Handoff](handoff.md) | Which incoming deltas await integration? | A delta arrives or is processed |
+| [Journal](journal.md) | What is open, including incoming deltas, and which substantive transitions occurred and why? | A change is integrated, corrected or rejected, or a point opens or closes |
 
 ## Storage zones
 
@@ -58,7 +57,7 @@ The root [AGENTS.md](../AGENTS.md) provides the shared action layer. [CLAUDE.md]
 
 ## Reading paths
 
-Start a session with this index, then the handoff inbox. For orientation, continue with project, requirements integration and specification. For source work, use research methodology and the corpus inventory. For temporal implementation, read temporal specification, architecture and testing; consult the general specification for its requirement rationale. For website work, use website specification and design. Consult the journal for observed evidence or the reason for a transition, and plan for open work.
+Start a session with this index, then the Open section at the beginning of the journal. For orientation, continue with project, requirements integration and specification. For source work, use research methodology and the corpus inventory. For temporal implementation, read temporal specification, architecture and testing; consult the general specification for its requirement rationale. For website work, use website specification and design. Consult the journal for observed evidence or the reason for a transition, and plan for open work.
 
 ## Document boundaries
 

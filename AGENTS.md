@@ -2,7 +2,7 @@
 
 # Working in Ivory KLEIO
 
-Use Promptotyping to develop the project from its maintained knowledge base. Read [knowledge/INDEX.md](knowledge/INDEX.md), then [knowledge/handoff.md](knowledge/handoff.md), then the document relevant to the task.
+Use Promptotyping to develop the project from its maintained knowledge base. Read [knowledge/INDEX.md](knowledge/INDEX.md), then the Open section at the beginning of [knowledge/journal.md](knowledge/journal.md), then the document relevant to the task.
 
 ## Knowledge routing
 
@@ -28,8 +28,8 @@ Use Promptotyping to develop the project from its maintained knowledge base. Rea
 - Derive expected test results independently of the production evaluator. Preserve fixed compatibility inputs and compare outputs at the equivalence level declared by the operation contract.
 - Keep the temporal contract in its dedicated specification, procedures in testing and observed runs in the journal. After moving knowledge, update index routes, canonical links and website generation together.
 - Preserve source references and alternative interpretations. Represent a model proposal, a formal validation result and a scholarly decision separately.
-- Record substantive transitions in the journal. Maintain future work in the plan and open incoming deltas in the handoff inbox.
-- Integrate an incoming delta into its owning document, record the result in the journal, then remove the processed inbox item.
+- Record substantive transitions in the journal. Maintain future work in the plan and open points, including incoming deltas, in the Open section of the journal.
+- Integrate an incoming delta into its owning document, record the result in the journal, then remove the processed item from Open.
 - Keep the public specification traceable to its canonical knowledge source. Author tutorials for actual working behavior, and verify examples against the implementation.
 - Use English for repository knowledge, code and documentation. Write plain prose with explicit evidence and stated uncertainties.
 - Work on main for routine initialization. Preserve unrelated changes. Publication and external actions follow the user's authorized scope.

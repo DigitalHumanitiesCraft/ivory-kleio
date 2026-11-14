@@ -14,7 +14,7 @@ status: active
 language: en
 created: 2026-09-05
 updated: 2026-10-15
-related: [requirements-integration, specification, temporal-specification, research-methodology, testing, journal, handoff]
+related: [requirements-integration, specification, temporal-specification, research-methodology, testing, journal]
 ---
 
 # Plan
