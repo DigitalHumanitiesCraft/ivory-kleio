@@ -75,3 +75,5 @@ The project follows [Promptotyping](https://lisa.gerda-henkel-stiftung.de/digita
 Contributions can develop source analysis, formalise an operation, supply a counterexample or implement specified behavior. Read [CONTRIBUTING.md](CONTRIBUTING.md) and the [testing strategy](knowledge/testing.md).
 
 Original text uses [CC BY 4.0](LICENSE). Code uses [MIT](LICENSE-CODE). Third-party materials retain their own terms.
+
+Imprint: <a href="https://dhcraft.org/imprint/">https://dhcraft.org/imprint/</a>
